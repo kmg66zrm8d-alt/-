@@ -1,0 +1,795 @@
+<!doctype html><html lang="ja"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>東京駅 ショップ・グルメガイド</title><style>
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;600;700;800&family=Playfair+Display:wght@600&display=swap');
+:root{--ink:#182631;--navy:#102f46;--navy2:#1b506d;--brick:#9b4038;--brick2:#c16b5c;--gold:#b19358;--cream:#f5f0e8;--paper:#f6f7f6;--white:#fff;--line:#dfe4e5;--muted:#74818a;--shadow:0 12px 35px rgba(16,47,70,.08)}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--paper);color:var(--ink);font-family:"Noto Sans JP",-apple-system,BlinkMacSystemFont,"Yu Gothic",Meiryo,sans-serif;letter-spacing:.015em}
+body:before{content:"";position:fixed;inset:0;pointer-events:none;z-index:-1;background:radial-gradient(circle at 8% 10%,rgba(155,64,56,.06),transparent 25%),radial-gradient(circle at 92% 30%,rgba(177,147,88,.06),transparent 28%)}
+.top{height:5px;background:linear-gradient(90deg,var(--brick) 0 19%,var(--navy) 19% 82%,var(--gold) 82% 100%)}
+
+header{background:rgba(255,255,255,.97);border-bottom:1px solid var(--line);position:sticky;top:0;z-index:20;backdrop-filter:blur(14px)}
+.head{max-width:1180px;margin:auto;padding:16px 22px 13px;display:flex;align-items:flex-end;justify-content:space-between}
+.brand small{display:inline-block;font-size:9px;letter-spacing:.25em;color:var(--brick);font-weight:800;border-left:3px solid var(--brick);padding-left:9px}
+.brand h1{margin:6px 0 3px;color:var(--navy);font-size:25px;line-height:1.25;letter-spacing:.045em;font-weight:800}
+.brand p{margin:0;color:var(--muted);font-size:11px}
+.nav{border-top:1px solid #f0f2f3;overflow:auto}
+.navin{max-width:1180px;margin:auto;padding:0 22px;display:flex}
+.nav button{position:relative;background:none;border:0;border-bottom:3px solid transparent;padding:12px 15px 11px;color:#62717a;white-space:nowrap;cursor:pointer;font:inherit;font-size:12px;transition:.2s}
+.nav button:hover{color:var(--navy);background:#faf8f5}
+.nav button.active{color:var(--navy);font-weight:800;border-bottom-color:var(--brick)}
+.nav button.active:after{content:"";position:absolute;left:50%;bottom:-3px;width:18px;height:3px;transform:translateX(-50%);background:var(--brick)}
+
+.hero{position:relative;overflow:hidden;color:#fff;background:linear-gradient(120deg,#8f3933 0%,#a84a3e 23%,#173e57 67%,#102f46 100%)}
+.hero:before{
+  content:"";position:absolute;inset:0;opacity:.13;
+  background:
+    repeating-linear-gradient(90deg,transparent 0 18px,rgba(255,255,255,.8) 19px 20px,transparent 21px 39px),
+    linear-gradient(180deg,transparent 0 65%,rgba(0,0,0,.35) 100%);
+}
+.hero:after{
+  content:"東京駅";position:absolute;right:5%;bottom:-42px;
+  font-family:"Yu Mincho","Hiragino Mincho ProN",serif;font-size:125px;font-weight:700;
+  color:rgba(255,255,255,.065);letter-spacing:.08em;white-space:nowrap
+}
+.heroin{position:relative;z-index:1;max-width:1180px;margin:auto;padding:43px 22px 47px}
+.heroin>div:first-child{display:flex;align-items:center;gap:10px;color:#f0d8a2;font-size:9px;letter-spacing:.24em;font-weight:800}
+.heroin>div:first-child:before{content:"▰";font-size:9px;color:#f0d8a2}
+.heroin>div:first-child:after{content:"";width:45px;height:1px;background:#f0d8a2;opacity:.7}
+.hero h2{margin:10px 0 8px;font-size:32px;line-height:1.35;letter-spacing:.04em;font-weight:700}
+.hero p{margin:0;color:#f3e9e5;font-size:12px;line-height:1.9}
+
+.tools{max-width:1180px;margin:-25px auto 0;padding:0 22px;position:relative;z-index:3}
+.search{display:flex;gap:8px;background:rgba(255,255,255,.98);border:1px solid #dbe2e5;border-radius:12px;padding:9px;box-shadow:0 14px 38px rgba(16,47,70,.13)}
+.search:before{content:"東京駅";display:flex;align-items:center;padding:0 10px;color:var(--brick);font-family:"Yu Mincho","Hiragino Mincho ProN",serif;font-size:11px;font-weight:700;border-right:1px solid var(--line)}
+.search input{flex:1;border:0;outline:0;background:#fafbfb;border-radius:8px;padding:13px 15px;font:inherit;font-size:13px;color:var(--ink)}
+.search input::placeholder{color:#9aa5ab}
+.search button{border:0;border-radius:8px;background:#edf1f2;color:#596a74;padding:0 18px;cursor:pointer;font:inherit;font-size:11px;transition:.2s}
+.search button:hover{background:var(--navy);color:#fff}
+
+main{max-width:1180px;margin:29px auto 70px;padding:0 22px}
+.bar{display:flex;justify-content:space-between;align-items:end;margin:0 0 13px;padding:0 2px}
+.bar h3{margin:0;color:var(--navy);font-size:19px;font-weight:800;letter-spacing:.03em}
+.bar h3:before{content:"TOKYO";font-family:"Playfair Display",serif;color:var(--brick);font-size:10px;letter-spacing:.18em;margin-right:9px;vertical-align:2px}
+.bar span{color:var(--muted);font-size:11px;background:#fff;border:1px solid var(--line);border-radius:20px;padding:5px 11px}
+.cats{display:flex;gap:7px;flex-wrap:wrap;margin:0 0 22px}
+.cats button{border:1px solid #d7dfe2;background:#fff;border-radius:999px;padding:8px 16px;color:#5c6b74;cursor:pointer;font:inherit;font-size:11px;transition:.18s}
+.cats button:hover{transform:translateY(-1px);box-shadow:0 4px 12px rgba(16,47,70,.07)}
+.cats button.active{background:var(--navy);border-color:var(--navy);color:#fff;box-shadow:0 5px 14px rgba(16,47,70,.16)}
+
+.category{background:rgba(255,255,255,.96);border:1px solid var(--line);border-radius:13px;margin-bottom:21px;overflow:hidden;box-shadow:var(--shadow)}
+.category h4{position:relative;margin:0;padding:15px 19px 14px;background:linear-gradient(90deg,#f4eee6,#fafbfb);border-left:5px solid var(--brick);color:var(--navy);font-size:15px;font-weight:800;letter-spacing:.045em}
+.category h4:before{content:"";display:inline-block;width:13px;height:13px;margin-right:9px;vertical-align:-2px;border:2px solid var(--brick);border-radius:50%}
+.category h4:after{content:"";position:absolute;right:18px;top:50%;width:32px;height:1px;background:#d4dce0}
+.grid{display:grid;grid-template-columns:1fr 1fr}
+.shop{position:relative;padding:12px 16px 11px;min-height:57px;border-bottom:1px solid #edf0f1;transition:.18s}
+.shop:nth-last-child(-n+2){border-bottom:0}
+.shop:hover{background:#fbfaf8;padding-left:19px}
+.shop a{color:#1c5878;text-decoration:none;font-size:13px;line-height:1.55;font-weight:600}
+.shop a:hover{color:var(--brick)}
+.shop a:after{content:"↗";display:inline-block;margin-left:5px;color:#9aa7ae;font-size:9px;transform:translateY(-1px)}
+.meta{display:inline;font-size:9px;color:#8a969d;margin-left:9px;white-space:nowrap}
+.facility{font-weight:700;color:#63727b}
+.loc{margin-left:4px;color:#9aa4aa}
+.dot{display:inline-block;width:6px;height:6px;border-radius:50%;margin-right:7px;vertical-align:2px;box-shadow:0 0 0 2px rgba(0,0,0,.025)}
+.empty{background:#fff;border:1px solid var(--line);border-radius:12px;padding:50px;text-align:center;color:var(--muted);box-shadow:var(--shadow)}
+
+footer{position:relative;overflow:hidden;background:var(--navy);color:#bdcbd3;padding:30px 22px}
+footer:before{content:"丸の内";position:absolute;left:5%;top:-35px;font-family:"Yu Mincho","Hiragino Mincho ProN",serif;font-size:110px;color:rgba(255,255,255,.035)}
+footer:after{content:"TOKYO";position:absolute;right:5%;top:-45px;font-family:"Playfair Display",serif;font-size:145px;color:rgba(255,255,255,.035)}
+.foot{position:relative;z-index:1;max-width:1180px;margin:auto;font-size:10px;line-height:2}
+.foot b{color:#fff;font-size:12px;letter-spacing:.05em}
+
+@media(max-width:700px){
+ .head{padding:15px 14px 12px}.brand h1{font-size:20px}.brand p{font-size:10px}
+ .navin{padding:0 7px}.nav button{padding:10px 10px;font-size:11px}
+ .heroin{padding:31px 14px 36px}.hero h2{font-size:24px}.hero p{font-size:11px}.hero:after{font-size:70px;bottom:-10px}
+ .tools{padding:0 14px;margin-top:-18px}.search{padding:7px}.search:before{display:none}.search input{padding:11px 12px;font-size:12px}.search button{padding:0 12px}
+ main{padding:0 14px;margin-top:24px}.bar h3{font-size:17px}
+ .grid{grid-template-columns:1fr}.shop{min-height:0;padding:11px 13px}.shop:hover{padding-left:13px}.shop:nth-last-child(-n+2){border-bottom:1px solid #edf0f1}.shop:last-child{border-bottom:0}
+ .meta{display:block;margin:2px 0 0 13px;font-size:9px}.loc{margin-left:3px}.category h4{padding:13px 15px}
+}
+
+/* ===== TOKYO STATION IDENTITY ===== */
+.hero{
+  min-height:315px;
+  background:
+    linear-gradient(90deg,rgba(111,40,34,.97) 0%,rgba(130,49,41,.92) 33%,rgba(16,47,70,.92) 70%,rgba(10,38,56,.98) 100%);
+}
+.hero:before{
+  content:"";
+  position:absolute;
+  inset:auto 0 0;
+  height:155px;
+  opacity:.32;
+  background:
+    /* 丸の内駅舎の屋根 */
+    linear-gradient(155deg,transparent 0 34%,rgba(52,25,22,.85) 34.5% 35.5%,transparent 36%),
+    linear-gradient(25deg,transparent 0 34%,rgba(52,25,22,.85) 34.5% 35.5%,transparent 36%),
+    /* 赤レンガ壁 */
+    repeating-linear-gradient(90deg,rgba(255,220,190,.75) 0 2px,transparent 2px 24px),
+    repeating-linear-gradient(0deg,rgba(255,220,190,.55) 0 2px,transparent 2px 12px);
+  background-size:520px 155px,520px 155px,520px 155px,520px 155px;
+  background-position:center bottom;
+  mask-image:linear-gradient(to top,black,transparent);
+}
+.hero:after{
+  content:"東京駅";
+  position:absolute;
+  right:3%;
+  bottom:-55px;
+  font-family:"Yu Mincho","Hiragino Mincho ProN",serif;
+  font-size:175px;
+  font-weight:800;
+  letter-spacing:.12em;
+  color:rgba(255,255,255,.10);
+  white-space:nowrap;
+}
+.heroin{
+  padding-top:52px;
+  padding-bottom:72px;
+}
+.heroin:after{
+  content:"TOKYO STATION";
+  position:absolute;
+  right:22px;
+  bottom:22px;
+  padding:8px 15px;
+  border:1px solid rgba(255,255,255,.35);
+  color:rgba(255,255,255,.85);
+  font-family:"Playfair Display",serif;
+  font-size:11px;
+  letter-spacing:.25em;
+  background:rgba(20,30,35,.18);
+}
+/* 駅舎の窓・ドームを象徴するカード */
+.station-mark{
+  position:absolute;
+  right:55px;
+  top:30px;
+  width:235px;
+  height:115px;
+  border:2px solid rgba(238,211,166,.65);
+  border-bottom:0;
+  border-radius:120px 120px 0 0;
+  opacity:.72;
+}
+.station-mark:before,
+.station-mark:after{
+  content:"";
+  position:absolute;
+  bottom:0;
+  width:18px;
+  height:82px;
+  border-left:2px solid rgba(238,211,166,.55);
+  border-right:2px solid rgba(238,211,166,.55);
+}
+.station-mark:before{left:38px}
+.station-mark:after{right:38px}
+.station-window{
+  position:absolute;
+  left:50%;
+  bottom:0;
+  transform:translateX(-50%);
+  width:80px;
+  height:52px;
+  border:2px solid rgba(238,211,166,.55);
+  border-radius:45px 45px 0 0;
+}
+.station-sign{
+  display:inline-flex;
+  align-items:center;
+  gap:10px;
+  margin-top:15px;
+  padding:7px 13px;
+  border:1px solid rgba(255,255,255,.48);
+  background:rgba(17,35,44,.24);
+  font-size:10px;
+  letter-spacing:.12em;
+}
+.station-sign:before{
+  content:"東京駅";
+  font-family:"Yu Mincho","Hiragino Mincho ProN",serif;
+  font-size:14px;
+  font-weight:700;
+}
+.station-sign span{opacity:.85}
+
+/* 東京駅駅名標風の帯 */
+.nav:before{
+  content:"東京駅  TOKYO STATION";
+  display:block;
+  max-width:1180px;
+  margin:auto;
+  padding:6px 22px 0;
+  color:#8b3932;
+  font-size:8px;
+  font-weight:800;
+  letter-spacing:.18em;
+}
+
+/* 見出しに駅名標風のアクセント */
+.bar h3:before{
+  content:"東京駅";
+  font-family:"Yu Mincho","Hiragino Mincho ProN",serif;
+  color:#9b4038;
+  font-size:12px;
+  letter-spacing:.12em;
+  margin-right:9px;
+  vertical-align:1px;
+}
+@media(max-width:700px){
+  .hero{min-height:270px}
+  .hero:after{font-size:85px;bottom:-15px;right:-5px}
+  .heroin{padding-top:34px;padding-bottom:65px}
+  .heroin:after{right:14px;bottom:16px;font-size:9px}
+  .station-mark{right:12px;top:22px;width:145px;height:70px}
+  .station-mark:before,.station-mark:after{height:48px;width:12px}
+  .station-mark:before{left:23px}.station-mark:after{right:23px}
+  .station-window{width:48px;height:32px}
+  .nav:before{padding-left:9px;font-size:7px}
+}
+
+/* ===== Functional design upgrades ===== */
+.cats{
+  display:grid;
+  grid-template-columns:repeat(5,minmax(0,1fr));
+  gap:10px;
+  margin:0 0 24px;
+}
+.cats button{
+  min-height:62px;
+  border:1px solid #d7dfe2;
+  border-radius:14px;
+  background:linear-gradient(145deg,#fff,#f7f8f8);
+  padding:11px 10px;
+  color:#53636d;
+  cursor:pointer;
+  font:inherit;
+  font-size:11px;
+  font-weight:700;
+  transition:.2s;
+}
+.cats button:hover{transform:translateY(-3px);box-shadow:0 9px 20px rgba(16,47,70,.10)}
+.cats button.active{background:linear-gradient(145deg,var(--navy),#244f68);border-color:var(--navy);color:#fff}
+
+header{transition:box-shadow .25s}
+.head{transition:padding .25s}
+body.design-scrolled .head{padding-top:8px;padding-bottom:7px}
+body.design-scrolled header{box-shadow:0 7px 24px rgba(16,47,70,.13)}
+.search:focus-within{border-color:#9db0ba;box-shadow:0 14px 38px rgba(16,47,70,.17)}
+@media(max-width:900px){.cats{grid-template-columns:repeat(3,1fr)}}
+@media(max-width:700px){.cats{grid-template-columns:repeat(2,1fr)}}
+
+</style>
+<style>
+/* Tokyo Station railway-map category design */
+.railway-category-wrap{
+  margin: 28px 0 34px;
+  padding: 22px 20px 24px;
+  border: 1px solid rgba(17,43,68,.16);
+  background:
+    linear-gradient(180deg,rgba(255,255,255,.98),rgba(248,244,236,.96));
+  box-shadow: 0 12px 35px rgba(32,42,52,.09);
+  position:relative;
+  overflow:hidden;
+}
+.railway-category-wrap:before{
+  content:"";
+  position:absolute;left:0;right:0;top:0;height:5px;
+  background:linear-gradient(90deg,#9e2b25 0 18%,#173b61 18% 82%,#b58a3b 82%);
+}
+.railway-line-label{
+  display:flex;align-items:center;gap:10px;
+  margin-bottom:18px;color:#173b61;
+  letter-spacing:.08em;
+}
+.line-badge{
+  display:inline-flex;align-items:center;justify-content:center;
+  min-width:52px;height:30px;padding:0 9px;
+  background:#173b61;color:#fff;font-weight:800;
+  border-radius:2px;font-size:13px;
+}
+.line-name{font-weight:800;font-size:13px}
+.line-sub{font-size:11px;color:#68717a;letter-spacing:.04em}
+.railway-map{
+  display:flex;align-items:stretch;position:relative;
+  min-width:0;
+}
+.railway-map:before{
+  content:"";
+  position:absolute;
+  left:24px;right:24px;top:22px;height:7px;
+  background:#173b61;border-radius:8px;
+  box-shadow:0 0 0 1px rgba(255,255,255,.7);
+}
+.rail-station{
+  flex:1;min-width:0;
+  border:0;background:transparent;
+  position:relative;z-index:1;
+  padding:0 7px 2px;
+  cursor:pointer;color:#27333e;
+  font:inherit;
+}
+.station-dot{
+  width:25px;height:25px;border-radius:50%;
+  background:#fff;border:5px solid #173b61;
+  display:block;margin:9px auto 9px;
+  box-shadow:0 0 0 3px rgba(255,255,255,.95);
+  transition:.18s ease;
+}
+.station-text{
+  display:flex;flex-direction:column;gap:3px;
+  align-items:center;justify-content:flex-start;
+  min-height:47px;
+}
+.station-text b{font-size:13px;line-height:1.3}
+.station-text small{font-size:9px;letter-spacing:.08em;color:#7a8086}
+.rail-station:hover .station-dot,
+.rail-station:focus-visible .station-dot{
+  transform:scale(1.12);
+}
+.rail-station.active .station-dot{
+  background:#173b61;
+  border-color:#173b61;
+  box-shadow:0 0 0 4px #fff,0 0 0 7px rgba(158,43,37,.32);
+}
+.rail-station.active .station-text b{color:#9e2b25}
+.rail-station.food .station-dot{border-color:#9e2b25}
+.rail-station.foods .station-dot{border-color:#b58a3b}
+.rail-station.goods .station-dot{border-color:#4f687e}
+.rail-station.fashion .station-dot{border-color:#687c62}
+.rail-station.active.food .station-dot{background:#9e2b25}
+.rail-station.active.foods .station-dot{background:#b58a3b}
+.rail-station.active.goods .station-dot{background:#4f687e}
+.rail-station.active.fashion .station-dot{background:#687c62}
+@media(max-width:720px){
+  .railway-category-wrap{padding:19px 12px 17px}
+  .line-sub{display:none}
+  .railway-map{
+    overflow-x:auto;
+    padding:0 2px 8px;
+    scrollbar-width:thin;
+  }
+  .railway-map:before{left:24px;right:24px;min-width:520px}
+  .rail-station{flex:0 0 125px}
+  .station-text b{font-size:12px}
+}
+</style>
+
+
+<style>
+/* Extra Tokyo Station identity */
+body{
+  background:
+    linear-gradient(rgba(24,52,77,.025) 1px,transparent 1px),
+    linear-gradient(90deg,rgba(24,52,77,.025) 1px,transparent 1px),
+    #f7f3eb;
+  background-size:24px 24px;
+}
+header, .header, .site-header{
+  border-bottom:4px solid #9e2b25 !important;
+}
+</style>
+
+
+<style>
+/* Full-screen Tokyo Station opening animation */
+.tokyo-intro{
+  position:fixed;
+  inset:0;
+  z-index:99999;
+  overflow:hidden;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  background:
+    radial-gradient(circle at 50% 42%,rgba(255,255,255,.08),transparent 34%),
+    linear-gradient(135deg,#0d2944 0%,#163d60 48%,#7f211f 100%);
+  color:#fff;
+  isolation:isolate;
+  cursor:pointer;
+}
+.tokyo-intro::before{
+  content:"";
+  position:absolute;
+  inset:0;
+  background:
+    linear-gradient(90deg,transparent 0 49.7%,rgba(255,255,255,.08) 49.8%,transparent 50.2%),
+    linear-gradient(0deg,transparent 0 49.7%,rgba(255,255,255,.08) 49.8%,transparent 50.2%);
+  background-size:80px 80px;
+  opacity:.18;
+}
+.intro-grid{
+  position:absolute;
+  inset:0;
+  background:
+    linear-gradient(90deg,transparent 0 12%,rgba(255,255,255,.07) 12.1%,transparent 12.3% 87.7%,rgba(255,255,255,.07) 87.8%,transparent 88%),
+    linear-gradient(0deg,transparent 0 82%,rgba(255,255,255,.07) 82.1%,transparent 82.3%);
+}
+.intro-brick{
+  position:absolute;
+  left:-5%;
+  right:-5%;
+  bottom:-8%;
+  height:31%;
+  opacity:.32;
+  background:
+    linear-gradient(90deg,rgba(255,255,255,.11) 1px,transparent 1px) 0 0/42px 20px,
+    linear-gradient(rgba(255,255,255,.10) 1px,transparent 1px) 0 0/42px 20px,
+    #8c2d29;
+  transform:perspective(500px) rotateX(12deg);
+  transform-origin:bottom;
+}
+.intro-dome{
+  position:absolute;
+  width:190px;height:190px;
+  border:2px solid rgba(255,255,255,.18);
+  border-radius:50% 50% 10% 10%;
+  bottom:10%;
+  opacity:.5;
+}
+.dome-left{left:-55px}
+.dome-right{right:-55px}
+.intro-content{
+  position:relative;
+  z-index:3;
+  text-align:center;
+  width:min(90%,760px);
+  animation:introRise 1.1s cubic-bezier(.2,.8,.2,1) .15s both;
+}
+.intro-station-sign{
+  margin:0 auto 22px;
+  width:min(420px,82vw);
+  padding:8px 18px;
+  display:grid;
+  grid-template-columns:1fr auto 1fr;
+  align-items:center;
+  gap:10px;
+  background:#fff;
+  color:#153b5d;
+  border:3px solid #b18a43;
+  box-shadow:0 8px 35px rgba(0,0,0,.18);
+}
+.intro-jr,.intro-code{
+  font-size:11px;
+  letter-spacing:.2em;
+  font-weight:700;
+}
+.intro-code{text-align:right}
+.intro-station{
+  font-family:Georgia,"Times New Roman",serif;
+  font-size:27px;
+  font-weight:700;
+  letter-spacing:.1em;
+}
+.intro-rule{
+  width:82px;height:2px;margin:0 auto 20px;
+  background:#c8a45c;
+}
+.intro-kicker{
+  margin:0 0 10px;
+  font-size:11px;
+  letter-spacing:.34em;
+  font-weight:700;
+  opacity:.85;
+}
+.intro-content h1{
+  margin:0;
+  font-family:Georgia,"Times New Roman",serif;
+  font-size:clamp(48px,9vw,92px);
+  letter-spacing:.13em;
+  font-weight:500;
+  text-shadow:0 5px 25px rgba(0,0,0,.25);
+}
+.intro-sub{
+  margin:18px 0 25px;
+  font-size:15px;
+  line-height:2;
+  letter-spacing:.18em;
+  opacity:.9;
+}
+.intro-route{
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  gap:0;
+  margin:0 auto 20px;
+}
+.intro-route span{
+  width:13px;height:13px;
+  border:3px solid #fff;
+  border-radius:50%;
+  background:#153b5d;
+  box-shadow:0 0 0 2px rgba(255,255,255,.2);
+}
+.intro-route span:first-child,.intro-route span:last-child{
+  background:#a12d28;
+}
+.intro-route i{
+  display:block;
+  width:65px;height:3px;
+  background:#c8a45c;
+}
+.intro-enter{
+  margin:0;
+  font-size:9px;
+  letter-spacing:.38em;
+  opacity:.65;
+}
+@keyframes introRise{
+  from{opacity:0;transform:translateY(24px) scale(.98)}
+  to{opacity:1;transform:translateY(0) scale(1)}
+}
+@keyframes introFadeOut{
+  0%{opacity:1;visibility:visible}
+  72%{opacity:1}
+  100%{opacity:0;visibility:hidden;pointer-events:none}
+}
+@media(prefers-reduced-motion:reduce){
+  .tokyo-intro{
+    animation:introFadeOut .25s ease 1.4s forwards;
+  }
+  .intro-content{animation:none}
+}
+@media(max-width:560px){
+  .intro-station-sign{margin-bottom:18px}
+  .intro-station{font-size:22px}
+  .intro-kicker{font-size:9px;letter-spacing:.22em}
+  .intro-sub{font-size:13px}
+  .intro-route i{width:38px}
+}
+</style>
+
+
+<style>
+/* Tokyo Station + Tokyo Tower silhouette */
+.intro-content{z-index:4}
+.intro-rule{margin-top:0}
+
+.tokyo-silhouette{
+  position:absolute;
+  left:50%;
+  top:7%;
+  transform:translateX(-50%);
+  width:min(760px,92vw);
+  height:290px;
+  pointer-events:none;
+  z-index:2;
+  opacity:.9;
+}
+
+
+/* Tokyo Tower silhouette */
+.tower-silhouette{
+  position:absolute;
+  right:4%;
+  bottom:0;
+  width:155px;
+  height:250px;
+}
+.tower-antenna{
+  position:absolute;
+  left:50%;
+  top:0;
+  transform:translateX(-50%);
+  width:4px;height:48px;
+  background:#b85a4d;
+}
+.tower-top{
+  position:absolute;
+  top:43px;left:50%;
+  transform:translateX(-50%);
+  width:15px;height:14px;
+  background:#b85a4d;
+  border-radius:2px;
+}
+.tower-neck{
+  position:absolute;
+  top:55px;left:50%;
+  transform:translateX(-50%);
+  width:27px;height:78px;
+  background:#9e4038;
+  clip-path:polygon(35% 0,65% 0,100% 100%,0 100%);
+}
+.tower-observation{
+  position:absolute;
+  top:70px;left:50%;
+  transform:translateX(-50%);
+  width:67px;height:17px;
+  background:#a94a40;
+  border-radius:2px;
+  box-shadow:0 22px 0 #934038;
+}
+.tower-truss{
+  position:absolute;
+  left:50%;bottom:15px;
+  transform:translateX(-50%);
+  width:118px;height:153px;
+  background:
+    linear-gradient(63deg,transparent 47%,rgba(88,38,35,.9) 48% 52%,transparent 53%),
+    linear-gradient(-63deg,transparent 47%,rgba(88,38,35,.9) 48% 52%,transparent 53%),
+    linear-gradient(90deg,transparent 47%,rgba(88,38,35,.75) 48% 52%,transparent 53%),
+    linear-gradient(0deg,rgba(150,55,48,.98),rgba(176,72,62,.9));
+  clip-path:polygon(42% 0,58% 0,100% 100%,0 100%);
+  opacity:.95;
+}
+.tower-base{
+  position:absolute;
+  left:50%;bottom:0;
+  transform:translateX(-50%);
+  width:145px;height:28px;
+  background:#70302c;
+  clip-path:polygon(25% 0,75% 0,100% 100%,0 100%);
+}
+
+/* Keep title below the silhouettes */
+.intro-content{
+  margin-top:170px;
+}
+@media(max-width:560px){
+  .tokyo-silhouette{
+    top:6%;
+    height:210px;
+    width:105vw;
+  }
+  .station-silhouette{
+    left:1%;
+    width:66%;
+    height:110px;
+  }
+  .station-dome{width:54px;height:54px;bottom:55px}
+  .station-roof{bottom:60px;height:28px}
+  .station-body{height:64px}
+  .station-windows{height:32px}
+  .tower-silhouette{
+    right:0;
+    transform:scale(.72);
+    transform-origin:bottom right;
+  }
+  .intro-content{margin-top:130px}
+}
+
+
+/* Opening screen is dismissed only by user tap/click */
+.tokyo-intro{
+  transition:opacity .45s ease, visibility .45s ease;
+}
+.tokyo-intro.is-hidden{
+  opacity:0;
+  visibility:hidden;
+  pointer-events:none;
+}
+</style>
+
+</head><body>
+
+<div id="tokyoIntro" class="tokyo-intro" aria-label="東京駅ガイド">
+  <div class="intro-grid"></div>
+  <div class="intro-brick"></div>
+  <div class="intro-dome dome-left"></div>
+  <div class="intro-dome dome-right"></div>
+  
+  <div class="tokyo-silhouette" aria-hidden="true">
+    <div class="tower-silhouette">
+      <div class="tower-top"></div>
+      <div class="tower-antenna"></div>
+      <div class="tower-neck"></div>
+      <div class="tower-observation"></div>
+      <div class="tower-truss"></div>
+      <div class="tower-base"></div>
+    </div>
+  </div>
+
+  <div class="intro-content">
+    <div class="intro-rule"></div>
+    <p class="intro-kicker">TOKYO STATION SHOPPING GUIDE</p>
+    <h1>東京駅ガイド</h1>
+    <p class="intro-sub">食べる・買う・楽しむ<br>東京駅のショップを探す</p>
+    <div class="intro-route">
+      <span></span><i></i><span></span><i></i><span></span>
+    </div>
+    <p class="intro-enter">SHOPPING GUIDE</p>
+  </div>
+</div>
+
+<div class="top"></div><header><div class="head"><div class="brand"><small>TOKYO STATION</small><h1>東京駅 ショップ・グルメガイド</h1><p>東京駅の赤レンガ駅舎を起点に、駅直結の商業施設を探せるデジタル案内</p></div></div><nav class="nav"><div class="navin" id="nav"></div></nav></header>
+<section class="hero"><div class="heroin"><div>SHOPPING & DINING GUIDE</div><h2>東京駅から、行きたいお店を探す。</h2><p>カテゴリーを選択して、店舗名・施設・場所から検索できます。</p></div></section>
+<div class="tools"><div class="search"><input id="q" placeholder="店名・料理・ジャンル・商品・施設・場所などで検索（例：ラーメン、カフェ、ケーキ、文房具）"><button onclick="document.getElementById('q').value='';render()">クリア</button></div></div>
+<main>
+<div class="bar"><h3 id="title">店舗一覧</h3><span id="count"></span></div>
+<div class="cats" id="cats"></div>
+<div id="content"></div></main>
+<footer><div class="foot"><b>東京駅 ショップ・グルメガイド</b><br>店舗名から公式の店舗案内へ移動できます。店名横の小さな表示は商業施設と所在地です。</div></footer>
+<script>
+const shops=[{"facility": "グランスタ東京", "category": "サービス・その他", "name": "元祖木村焼き 百両屋", "url": "https://www.gransta.jp/search/shop/?s=%E5%85%83%E7%A5%96%E6%9C%A8%E6%9D%91%E7%84%BC%E3%81%8D%20%E7%99%BE%E4%B8%A1%E5%B1%8B", "location": "1F 中央通路エリア", "displayCategory": "ファッション・雑貨・サービス"}, {"facility": "東京駅一番街", "category": "サービス・その他", "name": "Glico ALMOND DAYS", "url": "https://www.tokyoeki-1bangai.co.jp/shop/", "location": "B1 東京おかしランド", "displayCategory": "ファッション・雑貨・サービス"}, {"facility": "東京駅一番街", "category": "サービス・その他", "name": "カルビープラス", "url": "https://www.tokyoeki-1bangai.co.jp/shop/", "location": "B1 東京おかしランド", "displayCategory": "ファッション・雑貨・サービス"}, {"facility": "東京駅一番街", "category": "サービス・その他", "name": "ベビースターショップ（期間限定）", "url": "https://www.tokyoeki-1bangai.co.jp/shop/", "location": "B1 東京おかしランド", "displayCategory": "ファッション・雑貨・サービス"}, {"facility": "東京駅一番街", "category": "サービス・その他", "name": "超ハッピーターン", "url": "https://www.tokyoeki-1bangai.co.jp/shop/", "location": "B1 東京おかしランド", "displayCategory": "ファッション・雑貨・サービス"}, {"facility": "東京駅一番街", "category": "サービス・その他", "name": "金のおにぎり専門店 ぼんたぼんた 東京駅八重洲南口店", "url": "https://www.tokyoeki-1bangai.co.jp/shop/", "location": "1F 東京駅一番街", "displayCategory": "ファッション・雑貨・サービス"}, {"facility": "グランスタ東京", "category": "サービス・その他", "name": "おむすび百千", "url": "https://www.gransta.jp/search/shop/?s=%E3%81%8A%E3%82%80%E3%81%99%E3%81%B3%E7%99%BE%E5%8D%83", "location": "1F 京葉ストリートエリア", "displayCategory": "ファッション・雑貨・サービス"}, {"facility": "東京駅一番街", "category": "食品・スイーツ", "name": "ヨックモック", "url": "https://www.tokyoeki-1bangai.co.jp/shop/", "location": "B1", "displayCategory": "食品"}, {"facility": "東京駅一番街", "category": "食品・スイーツ", "name": "東京ばな奈s", "url": "https://www.tokyoeki-1bangai.co.jp/shop/", "location": "B1", "displayCategory": "食品"}, {"facility": "東京駅一番街", "category": "食品・スイーツ", "name": "東京みやげセンター", "url": "https://www.tokyoeki-1bangai.co.jp/shop/", "location": "B1", "displayCategory": "食品"}, {"facility": "グランスタ東京", "category": "食品・スイーツ", "name": "塚田農場OBENTO＆DELI 京葉ストリート店", "url": "https://www.gransta.jp/search/shop/?s=%E5%A1%9A%E7%94%B0%E8%BE%B2%E5%A0%B4OBENTO%EF%BC%86DELI%20%E4%BA%AC%E8%91%89%E3%82%B9%E3%83%88%E3%83%AA%E3%83%BC%E3%83%88%E5%BA%97", "location": "1F 京葉ストリートエリア", "displayCategory": "食品"}, {"facility": "東京駅一番街", "category": "食品・スイーツ", "name": "岡田謹製 茶織屋", "url": "https://www.tokyoeki-1bangai.co.jp/shop/", "location": "1F 東京ギフトパレット", "displayCategory": "食品"}, {"facility": "東京駅一番街", "category": "美容・ヘルスケア", "name": "アインズ＆トルペ東京駅店", "url": "https://www.tokyoeki-1bangai.co.jp/shop/", "location": "1F", "displayCategory": "ファッション・雑貨・サービス"}, {"facility": "グランスタ東京", "category": "飲食", "name": "江戸切り 助六そば ぬる燗佐藤", "url": "https://www.gransta.jp/search/shop/?s=%E6%B1%9F%E6%88%B8%E5%88%87%E3%82%8A%20%E5%8A%A9%E5%85%AD%E3%81%9D%E3%81%B0%20%E3%81%AC%E3%82%8B%E7%87%97%E4%BD%90%E8%97%A4", "location": "1F 中央通路エリア", "displayCategory": "飲食"}, {"facility": "東京駅一番街", "category": "飲食", "name": "越後そば 立ち喰いそば", "url": "https://www.tokyoeki-1bangai.co.jp/shop/", "location": "B1 東京駅一番街", "displayCategory": "飲食"}, {"facility": "グランスタ東京", "category": "サービス・その他", "name": "とんかつ まい泉食堂", "url": "https://www.gransta.jp/search/shop/?s=%E3%81%A8%E3%82%93%E3%81%8B%E3%81%A4%20%E3%81%BE%E3%81%84%E6%B3%89%E9%A3%9F%E5%A0%82", "location": "1F 吹き抜けエリア", "displayCategory": "ファッション・雑貨・サービス"}, {"facility": "グランスタ丸の内", "category": "ファッション・雑貨", "name": "ANEMONE", "url": "https://www.gransta.jp/search/shop/?s=ANEMONE", "location": "B1 丸の内地下中央口改札", "displayCategory": "ファッション・雑貨"}, {"facility": "グランスタ東京", "category": "サービス・その他", "name": "ユニクロ", "url": "https://www.gransta.jp/search/shop/?s=%E3%83%A6%E3%83%8B%E3%82%AF%E3%83%AD", "location": "B1 地下丸の内改札内", "displayCategory": "ファッション・雑貨・サービス"}, {"facility": "グランスタ東京", "category": "サービス・その他", "name": "TOKYO PASTA STATION", "url": "https://www.gransta.jp/search/shop/?s=TOKYO%20PASTA%20STATION", "location": "B1 地下丸の内改札内エリア", "displayCategory": "ファッション・雑貨・サービス"}, {"facility": "グランスタ東京", "category": "飲食", "name": "アル・デンシャル丸の内byアル・ケッチァーノ", "url": "https://www.gransta.jp/search/shop/?s=%E3%82%A2%E3%83%AB%E3%83%BB%E3%83%87%E3%83%B3%E3%82%B7%E3%83%A3%E3%83%AB%E4%B8%B8%E3%81%AE%E5%86%85by%E3%82%A2%E3%83%AB%E3%83%BB%E3%82%B1%E3%83%83%E3%83%81%E3%82%A1%E3%83%BC%E3%83%8E", "location": "1F 北通路エリア", "displayCategory": "飲食"}, {"facility": "グランスタ丸の内", "category": "食品・スイーツ", "name": "EATALY MARUNOUCHI", "url": "https://www.gransta.jp/search/shop/?s=EATALY%20MARUNOUCHI", "location": "B1 丸の内地下北口改札", "displayCategory": "食品"}, {"facility": "東京駅一番街", "category": "食品・スイーツ", "name": "イチゴショップ by FRANCAIS", "url": "https://www.tokyoeki-1bangai.co.jp/shop/", "location": "1F 東京ギフトパレット", "displayCategory": "食品"}, {"facility": "グランスタ東京", "category": "飲食", "name": "Japanese Malt Whisky SAKURA", "url": "https://www.gransta.jp/search/shop/?s=Japanese%20Malt%20Whisky%20SAKURA", "location": "B1 スクエア ゼロエリア", "displayCategory": "飲食"}, {"facility": "KITTE丸の内", "category": "飲食", "name": "サザコーヒー", "url": "https://marunouchi.jp-kitte.jp/shop/", "location": "1F", "displayCategory": "飲食"}, {"facility": "KITTE丸の内", "category": "飲食", "name": "タリーズコーヒー＆TEA", "url": "https://marunouchi.jp-kitte.jp/shop/", "location": "1F", "displayCategory": "飲食"}, {"facility": "KITTE丸の内", "category": "飲食", "name": "Tokyo City i CAFE", "url": "https://marunouchi.jp-kitte.jp/shop/", "location": "B1", "displayCategory": "飲食"}, {"facility": "グランスタ丸の内", "category": "飲食", "name": "ROKUMEI COFFEE CO.", "url": "https://www.gransta.jp/search/shop/?s=ROKUMEI%20COFFEE%20CO.", "location": "B1 丸の内地下北口改札", "displayCategory": "飲食"}, {"facility": "グランスタ八重洲", "category": "飲食", "name": "feb's coffee & scone TOKYO", "url": "https://www.gransta.jp/search/shop/?s=feb%27s%20coffee%20%26%20scone%20TOKYO", "location": "2F", "displayCategory": "飲食"}, {"facility": "グランスタ八重洲", "category": "飲食", "name": "GODIVA café Tokyo", "url": "https://www.gransta.jp/search/shop/?s=GODIVA%20caf%C3%A9%20Tokyo", "location": "B1", "displayCategory": "飲食"}, {"facility": "グランスタ八重洲", "category": "飲食", "name": "ゴンチャ", "url": "https://www.gransta.jp/search/shop/?s=%E3%82%B4%E3%83%B3%E3%83%81%E3%83%A3", "location": "B1", "displayCategory": "飲食"}, {"facility": "グランスタ八重洲", "category": "飲食", "name": "スターバックス コーヒー グランスタ八重洲店", "url": "https://www.gransta.jp/search/shop/?s=%E3%82%B9%E3%82%BF%E3%83%BC%E3%83%90%E3%83%83%E3%82%AF%E3%82%B9%20%E3%82%B3%E3%83%BC%E3%83%92%E3%83%BC%20%E3%82%B0%E3%83%A9%E3%83%B3%E3%82%B9%E3%82%BF%E5%85%AB%E9%87%8D%E6%B4%B2%E5%BA%97", "location": "B1", "displayCategory": "飲食"}, {"facility": "グランスタ東京", "category": "飲食", "name": "ベックスコーヒーショップ丸の内南口", "url": "https://www.gransta.jp/search/shop/?s=%E3%83%99%E3%83%83%E3%82%AF%E3%82%B9%E3%82%B3%E3%83%BC%E3%83%92%E3%83%BC%E3%82%B7%E3%83%A7%E3%83%83%E3%83%97%E4%B8%B8%E3%81%AE%E5%86%85%E5%8D%97%E5%8F%A3", "location": "1F 丸の内南口改札", "displayCategory": "飲食"}, {"facility": "グランスタ東京", "category": "飲食", "name": "5 CROSSTIES COFFEE", "url": "https://www.gransta.jp/search/shop/?s=5%20CROSSTIES%20COFFEE", "location": "B1 地下丸の内改札内", "displayCategory": "飲食"}, {"facility": "グランスタ東京", "category": "飲食", "name": "DEPOT", "url": "https://www.gransta.jp/search/shop/?s=DEPOT", "location": "B1 スクエア ゼロエリア", "displayCategory": "飲食"}, {"facility": "グランスタ東京", "category": "食品・スイーツ", "name": "Zopf カレーパン専門店", "url": "https://www.gransta.jp/search/shop/?s=Zopf%20%E3%82%AB%E3%83%AC%E3%83%BC%E3%83%91%E3%83%B3%E5%B0%82%E9%96%80%E5%BA%97", "location": "B1 スクエア ゼロエリア", "displayCategory": "食品"}, {"facility": "東京駅一番街", "category": "キャラクター・グッズ", "name": "DRAGON BALL STORE TOKYO", "url": "https://www.tokyoeki-1bangai.co.jp/shop/", "location": "1F 東京キャラクターストリート", "displayCategory": "キャラクター・グッズ"}, {"facility": "東京駅一番街", "category": "キャラクター・グッズ", "name": "Sanrio 東京キャラクターストリート店", "url": "https://www.tokyoeki-1bangai.co.jp/shop/", "location": "1F 東京キャラクターストリート", "displayCategory": "キャラクター・グッズ"}, {"facility": "東京駅一番街", "category": "キャラクター・グッズ", "name": "ポケモンストア 東京駅店", "url": "https://www.tokyoeki-1bangai.co.jp/shop/", "location": "1F 東京キャラクターストリート", "displayCategory": "キャラクター・グッズ"}, {"facility": "東京駅一番街", "category": "キャラクター・グッズ", "name": "ポケモンストア　東京駅店", "url": "https://www.tokyoeki-1bangai.co.jp/shop/", "location": "1F 東京キャラクターストリート", "displayCategory": "キャラクター・グッズ"}, {"facility": "東京駅一番街", "category": "キャラクター・グッズ", "name": "ULTRAMAN★フェリシモ POP UP SHOP", "url": "https://www.tokyoeki-1bangai.co.jp/shop/", "location": "1F 東京キャラクターストリート One Spot / 期間限定", "displayCategory": "キャラクター・グッズ"}, {"facility": "東京駅一番街", "category": "キャラクター・グッズ", "name": "ぼのぼのショップ＠東京駅一番街1階 One Spot", "url": "https://www.tokyoeki-1bangai.co.jp/shop/", "location": "1F 東京キャラクターストリート One Spot / 期間限定", "displayCategory": "キャラクター・グッズ"}, {"facility": "東京駅一番街", "category": "キャラクター・グッズ", "name": "GBL東京駅店", "url": "https://www.tokyoeki-1bangai.co.jp/shop/", "location": "B1 東京キャラクターストリート", "displayCategory": "キャラクター・グッズ"}, {"facility": "東京駅一番街", "category": "キャラクター・グッズ", "name": "JUMP SHOP", "url": "https://www.tokyoeki-1bangai.co.jp/shop/", "location": "B1 東京キャラクターストリート", "displayCategory": "キャラクター・グッズ"}, {"facility": "東京駅一番街", "category": "キャラクター・グッズ", "name": "Kirby Café PETIT", "url": "https://www.tokyoeki-1bangai.co.jp/shop/", "location": "B1 東京キャラクターストリート", "displayCategory": "キャラクター・グッズ"}, {"facility": "東京駅一番街", "category": "キャラクター・グッズ", "name": "NHKキャラクター ショップ", "url": "https://www.tokyoeki-1bangai.co.jp/shop/", "location": "B1 東京キャラクターストリート", "displayCategory": "キャラクター・グッズ"}, {"facility": "東京駅一番街", "category": "キャラクター・グッズ", "name": "ONE PIECE 麦わらストア 東京駅店", "url": "https://www.tokyoeki-1bangai.co.jp/shop/", "location": "B1 東京キャラクターストリート", "displayCategory": "キャラクター・グッズ"}, {"facility": "東京駅一番街", "category": "キャラクター・グッズ", "name": "TBSストア", "url": "https://www.tokyoeki-1bangai.co.jp/shop/", "location": "B1 東京キャラクターストリート", "displayCategory": "キャラクター・グッズ"}, {"facility": "東京駅一番街", "category": "キャラクター・グッズ", "name": "The POOH SHOP 東京駅 by marimocraft", "url": "https://www.tokyoeki-1bangai.co.jp/shop/", "location": "B1 東京キャラクターストリート", "displayCategory": "キャラクター・グッズ"}, {"facility": "東京駅一番街", "category": "キャラクター・グッズ", "name": "hololive production official shop in Tokyo Station", "url": "https://www.tokyoeki-1bangai.co.jp/shop/", "location": "B1 東京キャラクターストリート", "displayCategory": "キャラクター・グッズ"}, {"facility": "東京駅一番街", "category": "キャラクター・グッズ", "name": "mofusand もふもふストア", "url": "https://www.tokyoeki-1bangai.co.jp/shop/", "location": "B1 東京キャラクターストリート", "displayCategory": "キャラクター・グッズ"}, {"facility": "東京駅一番街", "category": "キャラクター・グッズ", "name": "すみっコぐらしshop東京駅店", "url": "https://www.tokyoeki-1bangai.co.jp/shop/", "location": "B1 東京キャラクターストリート", "displayCategory": "キャラクター・グッズ"}, {"facility": "東京駅一番街", "category": "キャラクター・グッズ", "name": "ちいかわらんど TOKYO Station", "url": "https://www.tokyoeki-1bangai.co.jp/shop/", "location": "B1 東京キャラクターストリート", "displayCategory": "キャラクター・グッズ"}, {"facility": "東京駅一番街", "category": "キャラクター・グッズ", "name": "どんぐり共和国", "url": "https://www.tokyoeki-1bangai.co.jp/shop/", "location": "B1 東京キャラクターストリート", "displayCategory": "キャラクター・グッズ"}, {"facility": "東京駅一番街", "category": "キャラクター・グッズ", "name": "にしむらゆうじに出会う店", "url": "https://www.tokyoeki-1bangai.co.jp/shop/", "location": "B1 東京キャラクターストリート", "displayCategory": "キャラクター・グッズ"}, {"facility": "東京駅一番街", "category": "キャラクター・グッズ", "name": "ウルトラマンワールドM78", "url": "https://www.tokyoeki-1bangai.co.jp/shop/", "location": "B1 東京キャラクターストリート", "displayCategory": "キャラクター・グッズ"}, {"facility": "東京駅一番街", "category": "キャラクター・グッズ", "name": "ガシャポンバンダイオフィシャルショップ＠TOKYO STATION", "url": "https://www.tokyoeki-1bangai.co.jp/shop/", "location": "B1 東京キャラクターストリート", "displayCategory": "キャラクター・グッズ"}, {"facility": "東京駅一番街", "category": "キャラクター・グッズ", "name": "クレヨンしんちゃんオフィシャルショップ～アクションデパート東京駅店～", "url": "https://www.tokyoeki-1bangai.co.jp/shop/", "location": "B1 東京キャラクターストリート", "displayCategory": "キャラクター・グッズ"}, {"facility": "東京駅一番街", "category": "キャラクター・グッズ", "name": "コウペンちゃん はなまるステーション", "url": "https://www.tokyoeki-1bangai.co.jp/shop/", "location": "B1 東京キャラクターストリート", "displayCategory": "キャラクター・グッズ"}, {"facility": "東京駅一番街", "category": "キャラクター・グッズ", "name": "スヌーピータウンミニ", "url": "https://www.tokyoeki-1bangai.co.jp/shop/", "location": "B1 東京キャラクターストリート", "displayCategory": "キャラクター・グッズ"}, {"facility": "東京駅一番街", "category": "キャラクター・グッズ", "name": "テレアサショップ", "url": "https://www.tokyoeki-1bangai.co.jp/shop/", "location": "B1 東京キャラクターストリート", "displayCategory": "キャラクター・グッズ"}, {"facility": "東京駅一番街", "category": "キャラクター・グッズ", "name": "テレ東本舗。", "url": "https://www.tokyoeki-1bangai.co.jp/shop/", "location": "B1 東京キャラクターストリート", "displayCategory": "キャラクター・グッズ"}, {"facility": "東京駅一番街", "category": "キャラクター・グッズ", "name": "トミカ・プラレールショップ", "url": "https://www.tokyoeki-1bangai.co.jp/shop/", "location": "B1 東京キャラクターストリート", "displayCategory": "キャラクター・グッズ"}, {"facility": "東京駅一番街", "category": "キャラクター・グッズ", "name": "ハリー・ポッター　マホウドコロ 東京駅店", "url": "https://www.tokyoeki-1bangai.co.jp/shop/", "location": "B1 東京キャラクターストリート", "displayCategory": "キャラクター・グッズ"}, {"facility": "東京駅一番街", "category": "キャラクター・グッズ", "name": "フジテレビショップ フジさん 東京駅店", "url": "https://www.tokyoeki-1bangai.co.jp/shop/", "location": "B1 東京キャラクターストリート", "displayCategory": "キャラクター・グッズ"}, {"facility": "東京駅一番街", "category": "キャラクター・グッズ", "name": "プリキュア プリティストア東京店", "url": "https://www.tokyoeki-1bangai.co.jp/shop/", "location": "B1 東京キャラクターストリート", "displayCategory": "キャラクター・グッズ"}, {"facility": "東京駅一番街", "category": "キャラクター・グッズ", "name": "ミッフィースタイル", "url": "https://www.tokyoeki-1bangai.co.jp/shop/", "location": "B1 東京キャラクターストリート", "displayCategory": "キャラクター・グッズ"}, {"facility": "東京駅一番街", "category": "キャラクター・グッズ", "name": "リラックマストア", "url": "https://www.tokyoeki-1bangai.co.jp/shop/", "location": "B1 東京キャラクターストリート", "displayCategory": "キャラクター・グッズ"}, {"facility": "東京駅一番街", "category": "キャラクター・グッズ", "name": "レゴⓇストア", "url": "https://www.tokyoeki-1bangai.co.jp/shop/", "location": "B1 東京キャラクターストリート", "displayCategory": "キャラクター・グッズ"}, {"facility": "東京駅一番街", "category": "キャラクター・グッズ", "name": "仮面ライダーストア東京", "url": "https://www.tokyoeki-1bangai.co.jp/shop/", "location": "B1 東京キャラクターストリート", "displayCategory": "キャラクター・グッズ"}, {"facility": "東京駅一番街", "category": "キャラクター・グッズ", "name": "日テレ屋", "url": "https://www.tokyoeki-1bangai.co.jp/shop/", "location": "B1 東京キャラクターストリート", "displayCategory": "キャラクター・グッズ"}, {"facility": "東京駅一番街", "category": "キャラクター・グッズ", "name": "松竹歌舞伎屋本舗", "url": "https://www.tokyoeki-1bangai.co.jp/shop/", "location": "B1 東京キャラクターストリート", "displayCategory": "キャラクター・グッズ"}, {"facility": "東京駅一番街", "category": "キャラクター・グッズ", "name": "ウィッシュミーメルPOP-UP STORE×むにゅぐるみパティオ", "url": "https://www.tokyoeki-1bangai.co.jp/shop/", "location": "B1 東京キャラクターストリート One Spot / 期間限定", "displayCategory": "キャラクター・グッズ"}, {"facility": "グランスタ丸の内", "category": "美容・ヘルスケア", "name": "東京ビジネスクリニック グランスタ丸の内店", "url": "https://www.gransta.jp/search/shop/?s=%E6%9D%B1%E4%BA%AC%E3%83%93%E3%82%B8%E3%83%8D%E3%82%B9%E3%82%AF%E3%83%AA%E3%83%8B%E3%83%83%E3%82%AF%20%E3%82%B0%E3%83%A9%E3%83%B3%E3%82%B9%E3%82%BF%E4%B8%B8%E3%81%AE%E5%86%85%E5%BA%97", "location": "B1 丸の内地下北口改札", "displayCategory": "ファッション・雑貨・サービス"}, {"facility": "グランスタ東京", "category": "サービス・その他", "name": "SOBAP", "url": "https://www.gransta.jp/search/shop/?s=SOBAP", "location": "1F 吹き抜けエリア", "displayCategory": "ファッション・雑貨・サービス"}, {"facility": "グランスタ東京", "category": "食品・スイーツ", "name": "TOKYO!!!（トーキョーみっつ）", "url": "https://www.gransta.jp/search/shop/?s=TOKYO%21%21%21%EF%BC%88%E3%83%88%E3%83%BC%E3%82%AD%E3%83%A7%E3%83%BC%E3%81%BF%E3%81%A3%E3%81%A4%EF%BC%89", "location": "1F 吹き抜けエリア", "displayCategory": "食品"}, {"facility": "東京駅一番街", "category": "サービス・その他", "name": "HIGHBALL BAR 東京駅1923", "url": "https://www.tokyoeki-1bangai.co.jp/shop/", "location": "2F 東京グルメゾン", "displayCategory": "ファッション・雑貨・サービス"}, {"facility": "東京駅一番街", "category": "サービス・その他", "name": "板前バル", "url": "https://www.tokyoeki-1bangai.co.jp/shop/", "location": "2F 東京グルメゾン", "displayCategory": "ファッション・雑貨・サービス"}, {"facility": "東京駅一番街", "category": "サービス・その他", "name": "酒場 シナトラ", "url": "https://www.tokyoeki-1bangai.co.jp/shop/", "location": "2F 東京グルメゾン", "displayCategory": "ファッション・雑貨・サービス"}, {"facility": "東京駅一番街", "category": "サービス・その他", "name": "函館立喰い寿司 函太郎", "url": "https://www.tokyoeki-1bangai.co.jp/shop/", "location": "B1 にっぽん、グルメ街道", "displayCategory": "ファッション・雑貨・サービス"}, {"facility": "東京駅一番街", "category": "サービス・その他", "name": "博多かねふく ふく竹", "url": "https://www.tokyoeki-1bangai.co.jp/shop/", "location": "B1 にっぽん、グルメ街道", "displayCategory": "ファッション・雑貨・サービス"}, {"facility": "東京駅一番街", "category": "サービス・その他", "name": "香川 さぬき麺業", "url": "https://www.tokyoeki-1bangai.co.jp/shop/", "location": "B1 にっぽん、グルメ街道", "displayCategory": "ファッション・雑貨・サービス"}, {"facility": "東京駅一番街", "category": "サービス・その他", "name": "鹿児島 黒かつ亭", "url": "https://www.tokyoeki-1bangai.co.jp/shop/", "location": "B1 にっぽん、グルメ街道", "displayCategory": "ファッション・雑貨・サービス"}, {"facility": "グランスタ丸の内", "category": "食品・スイーツ", "name": "のもの", "url": "https://www.gransta.jp/search/shop/?s=%E3%81%AE%E3%82%82%E3%81%AE", "location": "B1 丸の内地下中央口改札", "displayCategory": "食品"}, {"facility": "グランスタ丸の内", "category": "食品・スイーツ", "name": "紀ノ国屋アントレ グランスタ丸の内店", "url": "https://www.gransta.jp/search/shop/?s=%E7%B4%80%E3%83%8E%E5%9B%BD%E5%B1%8B%E3%82%A2%E3%83%B3%E3%83%88%E3%83%AC%20%E3%82%B0%E3%83%A9%E3%83%B3%E3%82%B9%E3%82%BF%E4%B8%B8%E3%81%AE%E5%86%85%E5%BA%97", "location": "B1 丸の内地下中央口改札", "displayCategory": "食品"}, {"facility": "グランスタ東京", "category": "食品・スイーツ", "name": "紀ノ国屋アントレ グランスタ東京店", "url": "https://www.gransta.jp/search/shop/?s=%E7%B4%80%E3%83%8E%E5%9B%BD%E5%B1%8B%E3%82%A2%E3%83%B3%E3%83%88%E3%83%AC%20%E3%82%B0%E3%83%A9%E3%83%B3%E3%82%B9%E3%82%BF%E6%9D%B1%E4%BA%AC%E5%BA%97", "location": "1F 北通路エリア", "displayCategory": "食品"}, {"facility": "グランスタ東京", "category": "飲食", "name": "DEAN ＆ DELUCA", "url": "https://www.gransta.jp/search/shop/?s=DEAN%20%EF%BC%86%20DELUCA", "location": "B1 銀の鈴エリア", "displayCategory": "飲食"}, {"facility": "グランスタ丸の内", "category": "食品・スイーツ", "name": "Biople", "url": "https://www.gransta.jp/search/shop/?s=Biople", "location": "B1 丸の内地下中央口改札", "displayCategory": "食品"}, {"facility": "グランスタ丸の内", "category": "食品・スイーツ", "name": "スターバックス コーヒー グランスタ丸の内店", "url": "https://www.gransta.jp/search/shop/?s=%E3%82%B9%E3%82%BF%E3%83%BC%E3%83%90%E3%83%83%E3%82%AF%E3%82%B9%20%E3%82%B3%E3%83%BC%E3%83%92%E3%83%BC%20%E3%82%B0%E3%83%A9%E3%83%B3%E3%82%B9%E3%82%BF%E4%B8%B8%E3%81%AE%E5%86%85%E5%BA%97", "location": "B1 丸の内地下中央口改札", "displayCategory": "食品"}, {"facility": "グランスタ丸の内", "category": "食品・スイーツ", "name": "NewDaysグランスタ丸の内北口店", "url": "https://www.gransta.jp/search/shop/?s=NewDays%E3%82%B0%E3%83%A9%E3%83%B3%E3%82%B9%E3%82%BF%E4%B8%B8%E3%81%AE%E5%86%85%E5%8C%97%E5%8F%A3%E5%BA%97", "location": "B1 丸の内地下北口改札", "displayCategory": "食品"}, {"facility": "グランスタ丸の内", "category": "食品・スイーツ", "name": "WINESHOP ENOTECA", "url": "https://www.gransta.jp/search/shop/?s=WINESHOP%20ENOTECA", "location": "B1 丸の内地下北口改札", "displayCategory": "食品"}, {"facility": "グランスタ丸の内", "category": "食品・スイーツ", "name": "NewDaysグランスタ丸の内南口店", "url": "https://www.gransta.jp/search/shop/?s=NewDays%E3%82%B0%E3%83%A9%E3%83%B3%E3%82%B9%E3%82%BF%E4%B8%B8%E3%81%AE%E5%86%85%E5%8D%97%E5%8F%A3%E5%BA%97", "location": "B1 丸の内地下南口改札", "displayCategory": "食品"}, {"facility": "東京駅一番街", "category": "サービス・その他", "name": "パティスリー キハチ", "url": "https://www.tokyoeki-1bangai.co.jp/shop/", "location": "1F 東京ギフトパレット", "displayCategory": "ファッション・雑貨・サービス"}, {"facility": "グランスタ東京", "category": "サービス・その他", "name": "NewDaysグランスタ東京中央通路店", "url": "https://www.gransta.jp/search/shop/?s=NewDays%E3%82%B0%E3%83%A9%E3%83%B3%E3%82%B9%E3%82%BF%E6%9D%B1%E4%BA%AC%E4%B8%AD%E5%A4%AE%E9%80%9A%E8%B7%AF%E5%BA%97", "location": "1F 中央通路エリア", "displayCategory": "ファッション・雑貨・サービス"}, {"facility": "グランスタ東京", "category": "サービス・その他", "name": "NewDaysグランスタ東京八重洲北口店", "url": "https://www.gransta.jp/search/shop/?s=NewDays%E3%82%B0%E3%83%A9%E3%83%B3%E3%82%B9%E3%82%BF%E6%9D%B1%E4%BA%AC%E5%85%AB%E9%87%8D%E6%B4%B2%E5%8C%97%E5%8F%A3%E5%BA%97", "location": "1F 北通路エリア", "displayCategory": "ファッション・雑貨・サービス"}, {"facility": "グランスタ東京", "category": "サービス・その他", "name": "NewDaysグランスタ東京北通路店", "url": "https://www.gransta.jp/search/shop/?s=NewDays%E3%82%B0%E3%83%A9%E3%83%B3%E3%82%B9%E3%82%BF%E6%9D%B1%E4%BA%AC%E5%8C%97%E9%80%9A%E8%B7%AF%E5%BA%97", "location": "1F 北通路エリア", "displayCategory": "ファッション・雑貨・サービス"}, {"facility": "グランスタ東京", "category": "サービス・その他", "name": "NewDays KIOSK", "url": "https://www.gransta.jp/search/shop/?s=NewDays%20KIOSK", "location": "B1 地下丸の内改札内", "displayCategory": "ファッション・雑貨・サービス"}, {"facility": "グランスタ東京", "category": "サービス・その他", "name": "スターバックス コーヒー グランスタ東京B1店", "url": "https://www.gransta.jp/search/shop/?s=%E3%82%B9%E3%82%BF%E3%83%BC%E3%83%90%E3%83%83%E3%82%AF%E3%82%B9%20%E3%82%B3%E3%83%BC%E3%83%92%E3%83%BC%20%E3%82%B0%E3%83%A9%E3%83%B3%E3%82%B9%E3%82%BF%E6%9D%B1%E4%BA%ACB1%E5%BA%97", "location": "B1 スクエア ゼロエリア", "displayCategory": "ファッション・雑貨・サービス"}, {"facility": "グランスタ丸の内", "category": "サービス・その他", "name": "サンドイッチハウス メルヘン グランスタ丸の内店", "url": "https://www.gransta.jp/search/shop/?s=%E3%82%B5%E3%83%B3%E3%83%89%E3%82%A4%E3%83%83%E3%83%81%E3%83%8F%E3%82%A6%E3%82%B9%20%E3%83%A1%E3%83%AB%E3%83%98%E3%83%B3%20%E3%82%B0%E3%83%A9%E3%83%B3%E3%82%B9%E3%82%BF%E4%B8%B8%E3%81%AE%E5%86%85%E5%BA%97", "location": "B1 丸の内地下南口改札", "displayCategory": "ファッション・雑貨・サービス"}, {"facility": "グランスタ東京", "category": "サービス・その他", "name": "Butz Sandwich", "url": "https://www.gransta.jp/search/shop/?s=Butz%20Sandwich", "location": "1F 京葉ストリートエリア", "displayCategory": "ファッション・雑貨・サービス"}, {"facility": "KITTE丸の内", "category": "サービス・その他", "name": "ＫＩＴＴＥ丸の内エポスカードセンター", "url": "https://marunouchi.jp-kitte.jp/shop/", "location": "4F", "displayCategory": "ファッション・雑貨・サービス"}, {"facility": "KITTE丸の内", "category": "サービス・その他", "name": "MEN’S TBC", "url": "https://marunouchi.jp-kitte.jp/shop/", "location": "B1", "displayCategory": "ファッション・雑貨・サービス"}, {"facility": "KITTE丸の内", "category": "サービス・その他", "name": "QB HOUSE", "url": "https://marunouchi.jp-kitte.jp/shop/", "location": "B1", "displayCategory": "ファッション・雑貨・サービス"}, {"facility": "KITTE丸の内", "category": "サービス・その他", "name": "こころ整体院/naillab./Japan Stretch", "url": "https://marunouchi.jp-kitte.jp/shop/", "location": "B1", "displayCategory": "ファッション・雑貨・サービス"}, {"facility": "ヤエチカ", "category": "サービス・その他", "name": "iPhone修理救急便", "url": "https://www.yaechika.com/shop/", "location": "地下", "displayCategory": "ファッション・雑貨・サービス"}, {"facility": "ヤエチカ", "category": "サービス・その他", "name": "アトリエはるか", "url": "https://www.yaechika.com/shop/", "location": "地下", "displayCategory": "ファッション・雑貨・サービス"}, {"facility": "東京駅一番街", "category": "サービス・その他", "name": "Bellmart東京八重洲南", "url": "https://www.tokyoeki-1bangai.co.jp/shop/", "location": "1F", "displayCategory": "ファッション・雑貨・サービス"}, {"facility": "東京駅一番街", "category": "サービス・その他", "name": "アインズ＆トルペ東京駅店", "url": "https://www.tokyoeki-1bangai.co.jp/shop/", "location": "1F", "displayCategory": "ファッション・雑貨・サービス"}, {"facility": "東京駅一番街", "category": "サービス・その他", "name": "フォルトゥナ東京駅一番街店", "url": "https://www.tokyoeki-1bangai.co.jp/shop/", "location": "1F", "displayCategory": "ファッション・雑貨・サービス"}, {"facility": "東京駅一番街", "category": "サービス・その他", "name": "佐川急便 東京手ぶら観光", "url": "https://www.tokyoeki-1bangai.co.jp/shop/", "location": "1F", "displayCategory": "ファッション・雑貨・サービス"}, {"facility": "東京駅一番街", "category": "サービス・その他", "name": "佐川急便 東京手ぶら観光 手荷物預かり処", "url": "https://www.tokyoeki-1bangai.co.jp/shop/", "location": "1F 東京駅一番街", "displayCategory": "ファッション・雑貨・サービス"}, {"facility": "グランスタ丸の内", "category": "サービス・その他", "name": "STATION DESK", "url": "https://www.gransta.jp/search/shop/?s=STATION%20DESK", "location": "B1", "displayCategory": "ファッション・雑貨・サービス"}, {"facility": "グランスタ丸の内", "category": "サービス・その他", "name": "ABC-MART", "url": "https://www.gransta.jp/search/shop/?s=ABC-MART", "location": "B1 丸の内地下南口改札", "displayCategory": "ファッション・雑貨・サービス"}, {"facility": "グランスタ東京", "category": "食品・スイーツ", "name": "A Bite Coffee", "url": "https://www.gransta.jp/search/shop/?s=A%20Bite%20Coffee", "location": "B1 地下丸の内改札内", "displayCategory": "食品"}, {"facility": "グランスタ東京", "category": "食品・スイーツ", "name": "京橋千疋屋 旬感", "url": "https://www.gransta.jp/search/shop/?s=%E4%BA%AC%E6%A9%8B%E5%8D%83%E7%96%8B%E5%B1%8B%20%E6%97%AC%E6%84%9F", "location": "B1 地下丸の内改札内エリア", "displayCategory": "食品"}, {"facility": "東京駅一番街", "category": "食品・スイーツ", "name": "BAKERS gonna BAKE", "url": "https://www.tokyoeki-1bangai.co.jp/shop/", "location": "1F 東京ギフトパレット", "displayCategory": "食品"}, {"facility": "東京駅一番街", "category": "食品・スイーツ", "name": "CLUB HARIE e-challenge", "url": "https://www.tokyoeki-1bangai.co.jp/shop/", "location": "1F 東京ギフトパレット", "displayCategory": "食品"}, {"facility": "東京駅一番街", "category": "食品・スイーツ", "name": "PISTA & TOKYO", "url": "https://www.tokyoeki-1bangai.co.jp/shop/", "location": "1F 東京ギフトパレット", "displayCategory": "食品"}, {"facility": "東京駅一番街", "category": "食品・スイーツ", "name": "neko chef チーズ&フルーツ", "url": "https://www.tokyoeki-1bangai.co.jp/shop/", "location": "1F 東京ギフトパレット", "displayCategory": "食品"}, {"facility": "東京駅一番街", "category": "食品・スイーツ", "name": "あさぎり牛乳", "url": "https://www.tokyoeki-1bangai.co.jp/shop/", "location": "1F 東京ギフトパレット", "displayCategory": "食品"}, {"facility": "グランスタ丸の内", "category": "食品・スイーツ", "name": "BAKE CHEESE TART", "url": "https://www.gransta.jp/search/shop/?s=BAKE%20CHEESE%20TART", "location": "B1 丸の内地下中央口改札", "displayCategory": "食品"}, {"facility": "グランスタ丸の内", "category": "食品・スイーツ", "name": "and TOKYO", "url": "https://www.gransta.jp/search/shop/?s=and%20TOKYO", "location": "B1 丸の内地下中央口改札", "displayCategory": "食品"}, {"facility": "グランスタ東京", "category": "食品・スイーツ", "name": "GRAMERCY NEWYORK 八重洲店", "url": "https://www.gransta.jp/search/shop/?s=GRAMERCY%20NEWYORK%20%E5%85%AB%E9%87%8D%E6%B4%B2%E5%BA%97", "location": "1F 京葉ストリートエリア", "displayCategory": "食品"}, {"facility": "グランスタ東京", "category": "食品・スイーツ", "name": "フルーツピークス", "url": "https://www.gransta.jp/search/shop/?s=%E3%83%95%E3%83%AB%E3%83%BC%E3%83%84%E3%83%94%E3%83%BC%E3%82%AF%E3%82%B9", "location": "1F 京葉ストリートエリア", "displayCategory": "食品"}, {"facility": "グランスタ東京", "category": "食品・スイーツ", "name": "東京ミルクチーズ工場", "url": "https://www.gransta.jp/search/shop/?s=%E6%9D%B1%E4%BA%AC%E3%83%9F%E3%83%AB%E3%82%AF%E3%83%81%E3%83%BC%E3%82%BA%E5%B7%A5%E5%A0%B4", "location": "1F 京葉ストリートエリア", "displayCategory": "食品"}, {"facility": "グランスタ東京", "category": "食品・スイーツ", "name": "ラデュレ", "url": "https://www.gransta.jp/search/shop/?s=%E3%83%A9%E3%83%87%E3%83%A5%E3%83%AC", "location": "1F 吹き抜けエリア", "displayCategory": "食品"}, {"facility": "グランスタ東京", "category": "食品・スイーツ", "name": "ピエール・エルメ・パリ", "url": "https://www.gransta.jp/search/shop/?s=%E3%83%94%E3%82%A8%E3%83%BC%E3%83%AB%E3%83%BB%E3%82%A8%E3%83%AB%E3%83%A1%E3%83%BB%E3%83%91%E3%83%AA", "location": "B1 スクエア ゼロエリア", "displayCategory": "食品"}, {"facility": "グランスタ東京", "category": "食品・スイーツ", "name": "Butter Milk Lab.", "url": "https://www.gransta.jp/search/shop/?s=Butter%20Milk%20Lab.", "location": "B1 地下丸の内改札内", "displayCategory": "食品"}, {"facility": "グランスタ東京", "category": "食品・スイーツ", "name": "HENRI CHARPENTIER Atelier Tokyo", "url": "https://www.gransta.jp/search/shop/?s=HENRI%20CHARPENTIER%20Atelier%20Tokyo", "location": "B1 地下丸の内改札内", "displayCategory": "食品"}, {"facility": "グランスタ東京", "category": "食品・スイーツ", "name": "Ivorish MAISON", "url": "https://www.gransta.jp/search/shop/?s=Ivorish%20MAISON", "location": "B1 地下丸の内改札内エリア", "displayCategory": "食品"}, {"facility": "グランスタ東京", "category": "食品・スイーツ", "name": "Marche Bloom", "url": "https://www.gransta.jp/search/shop/?s=Marche%20Bloom", "location": "B1 地下丸の内改札内エリア", "displayCategory": "食品"}, {"facility": "グランスタ東京", "category": "食品・スイーツ", "name": "フォートナム・アンド・メイソン", "url": "https://www.gransta.jp/search/shop/?s=%E3%83%95%E3%82%A9%E3%83%BC%E3%83%88%E3%83%8A%E3%83%A0%E3%83%BB%E3%82%A2%E3%83%B3%E3%83%89%E3%83%BB%E3%83%A1%E3%82%A4%E3%82%BD%E3%83%B3", "location": "B1 地下丸の内改札内", "displayCategory": "食品"}, {"facility": "グランスタ東京", "category": "食品・スイーツ", "name": "京橋千疋屋 旬感", "url": "https://www.gransta.jp/search/shop/?s=%E4%BA%AC%E6%A9%8B%E5%8D%83%E7%96%8B%E5%B1%8B%20%E6%97%AC%E6%84%9F", "location": "B1 地下丸の内改札内エリア", "displayCategory": "食品"}, {"facility": "グランスタ東京", "category": "食品・スイーツ", "name": "Fairycake Fair", "url": "https://www.gransta.jp/search/shop/?s=Fairycake%20Fair", "location": "B1 銀の鈴エリア", "displayCategory": "食品"}, {"facility": "グランスタ東京", "category": "食品・スイーツ", "name": "Mr. CHEESECAKE", "url": "https://www.gransta.jp/search/shop/?s=Mr.%20CHEESECAKE", "location": "B1 銀の鈴エリア", "displayCategory": "食品"}, {"facility": "グランスタ東京", "category": "食品・スイーツ", "name": "とらや", "url": "https://www.gransta.jp/search/shop/?s=%E3%81%A8%E3%82%89%E3%82%84", "location": "B1 銀の鈴エリア", "displayCategory": "食品"}, {"facility": "グランスタ東京", "category": "食品・スイーツ", "name": "アトリエうかい", "url": "https://www.gransta.jp/search/shop/?s=%E3%82%A2%E3%83%88%E3%83%AA%E3%82%A8%E3%81%86%E3%81%8B%E3%81%84", "location": "B1 銀の鈴エリア", "displayCategory": "食品"}, {"facility": "グランスタ東京", "category": "食品・スイーツ", "name": "オードリー", "url": "https://www.gransta.jp/search/shop/?s=%E3%82%AA%E3%83%BC%E3%83%89%E3%83%AA%E3%83%BC", "location": "B1 銀の鈴エリア", "displayCategory": "食品"}, {"facility": "グランスタ東京", "category": "食品・スイーツ", "name": "パティスリー GIN NO MORI", "url": "https://www.gransta.jp/search/shop/?s=%E3%83%91%E3%83%86%E3%82%A3%E3%82%B9%E3%83%AA%E3%83%BC%20GIN%20NO%20MORI", "location": "B1 銀の鈴エリア", "displayCategory": "食品"}, {"facility": "グランスタ東京", "category": "食品・スイーツ", "name": "三原堂本店", "url": "https://www.gransta.jp/search/shop/?s=%E4%B8%89%E5%8E%9F%E5%A0%82%E6%9C%AC%E5%BA%97", "location": "B1 銀の鈴エリア", "displayCategory": "食品"}, {"facility": "グランスタ東京", "category": "食品・スイーツ", "name": "日本橋錦豊琳PLUS", "url": "https://www.gransta.jp/search/shop/?s=%E6%97%A5%E6%9C%AC%E6%A9%8B%E9%8C%A6%E8%B1%8A%E7%90%B3PLUS", "location": "B1 銀の鈴エリア", "displayCategory": "食品"}, {"facility": "グランスタ東京", "category": "食品・スイーツ", "name": "東京喫茶メリー", "url": "https://www.gransta.jp/search/shop/?s=%E6%9D%B1%E4%BA%AC%E5%96%AB%E8%8C%B6%E3%83%A1%E3%83%AA%E3%83%BC", "location": "B1 地下丸の内改札内", "displayCategory": "食品"}, {"facility": "グランスタ東京", "category": "食品・スイーツ", "name": "SHIROÉ by Hugh Morgan", "url": "https://www.gransta.jp/search/shop/?s=SHIRO%C3%89%20by%20Hugh%20Morgan", "location": "B1 銀の鈴エリア", "displayCategory": "食品"}, {"facility": "グランスタ東京", "category": "サービス・その他", "name": "肉卸小島", "url": "https://www.gransta.jp/search/shop/?s=%E8%82%89%E5%8D%B8%E5%B0%8F%E5%B3%B6", "location": "1F 中央通路エリア", "displayCategory": "ファッション・雑貨・サービス"}, {"facility": "グランスタ丸の内", "category": "ファッション・雑貨", "name": "Neue", "url": "https://www.gransta.jp/search/shop/?s=Neue", "location": "B1 丸の内地下北口改札", "displayCategory": "ファッション・雑貨"}, {"facility": "グランスタ東京", "category": "サービス・その他", "name": "AM STRAM GRAM nobolyquedaly", "url": "https://www.gransta.jp/search/shop/?s=AM%20STRAM%20GRAM%20nobolyquedaly", "location": "B1 銀の鈴エリア", "displayCategory": "ファッション・雑貨・サービス"}, {"facility": "グランスタ東京", "category": "サービス・その他", "name": "MAISON CACAO", "url": "https://www.gransta.jp/search/shop/?s=MAISON%20CACAO", "location": "1F 吹き抜けエリア", "displayCategory": "ファッション・雑貨・サービス"}, {"facility": "東京駅一番街", "category": "サービス・その他", "name": "VANILLABEANS THE ROASTERY TOKYO", "url": "https://www.tokyoeki-1bangai.co.jp/shop/", "location": "1F 東京ギフトパレット", "displayCategory": "ファッション・雑貨・サービス"}, {"facility": "東京駅一番街", "category": "サービス・その他", "name": "コートクール", "url": "https://www.tokyoeki-1bangai.co.jp/shop/", "location": "1F 東京ギフトパレット", "displayCategory": "ファッション・雑貨・サービス"}, {"facility": "グランスタ東京", "category": "サービス・その他", "name": "フォートナム・アンド・メイソン", "url": "https://www.gransta.jp/search/shop/?s=%E3%83%95%E3%82%A9%E3%83%BC%E3%83%88%E3%83%8A%E3%83%A0%E3%83%BB%E3%82%A2%E3%83%B3%E3%83%89%E3%83%BB%E3%83%A1%E3%82%A4%E3%82%BD%E3%83%B3", "location": "B1 地下丸の内改札内", "displayCategory": "ファッション・雑貨・サービス"}, {"facility": "グランスタ東京", "category": "ファッション・雑貨", "name": "VINYL", "url": "https://www.gransta.jp/search/shop/?s=VINYL", "location": "1F 吹き抜けエリア", "displayCategory": "ファッション・雑貨"}, {"facility": "グランスタ東京", "category": "ファッション・雑貨", "name": "ものとアート", "url": "https://www.gransta.jp/search/shop/?s=%E3%82%82%E3%81%AE%E3%81%A8%E3%82%A2%E3%83%BC%E3%83%88", "location": "1F 吹き抜けエリア", "displayCategory": "ファッション・雑貨"}, {"facility": "グランスタ丸の内", "category": "ファッション・雑貨", "name": "TRAVELER'S FACTORY STATION", "url": "https://www.gransta.jp/search/shop/?s=TRAVELER%27S%20FACTORY%20STATION", "location": "B1 丸の内地下北口改札", "displayCategory": "ファッション・雑貨"}, {"facility": "グランスタ東京", "category": "サービス・その他", "name": "OLD-FASHIONED STORE TOKYO", "url": "https://www.gransta.jp/search/shop/?s=OLD-FASHIONED%20STORE%20TOKYO", "location": "1F 吹き抜けエリア", "displayCategory": "ファッション・雑貨・サービス"}, {"facility": "東京駅一番街", "category": "食品・スイーツ", "name": "バターバトラー", "url": "https://www.tokyoeki-1bangai.co.jp/shop/", "location": "1F 東京ギフトパレット", "displayCategory": "食品"}, {"facility": "グランスタ丸の内", "category": "ファッション・雑貨", "name": "日乃本帆布", "url": "https://www.gransta.jp/search/shop/?s=%E6%97%A5%E4%B9%83%E6%9C%AC%E5%B8%86%E5%B8%83", "location": "B1 丸の内地下北口改札", "displayCategory": "ファッション・雑貨"}, {"facility": "東京駅一番街", "category": "ファッション・雑貨", "name": "サックスバー", "url": "https://www.tokyoeki-1bangai.co.jp/shop/", "location": "B1", "displayCategory": "飲食"}, {"facility": "グランスタ東京", "category": "サービス・その他", "name": "格之進ハンバーグ＆バル", "url": "https://www.gransta.jp/search/shop/?s=%E6%A0%BC%E4%B9%8B%E9%80%B2%E3%83%8F%E3%83%B3%E3%83%90%E3%83%BC%E3%82%B0%EF%BC%86%E3%83%90%E3%83%AB", "location": "B1 スクエア ゼロエリア", "displayCategory": "ファッション・雑貨・サービス"}, {"facility": "東京駅一番街", "category": "サービス・その他", "name": "アマンド東京", "url": "https://www.tokyoeki-1bangai.co.jp/shop/", "location": "1F 東京ギフトパレット", "displayCategory": "ファッション・雑貨・サービス"}, {"facility": "グランスタ東京", "category": "飲食", "name": "東京パニーノ アロマフレスカ", "url": "https://www.gransta.jp/search/shop/?s=%E6%9D%B1%E4%BA%AC%E3%83%91%E3%83%8B%E3%83%BC%E3%83%8E%20%E3%82%A2%E3%83%AD%E3%83%9E%E3%83%95%E3%83%AC%E3%82%B9%E3%82%AB", "location": "1F 吹き抜けエリア", "displayCategory": "飲食"}, {"facility": "グランスタ東京", "category": "飲食", "name": "常陸野ブルーイング 丸の内", "url": "https://www.gransta.jp/search/shop/?s=%E5%B8%B8%E9%99%B8%E9%87%8E%E3%83%96%E3%83%AB%E3%83%BC%E3%82%A4%E3%83%B3%E3%82%B0%20%E4%B8%B8%E3%81%AE%E5%86%85", "location": "1F 北通路エリア", "displayCategory": "飲食"}, {"facility": "グランスタ東京", "category": "飲食", "name": "Tokyo Station Beer Stand", "url": "https://www.gransta.jp/search/shop/?s=Tokyo%20Station%20Beer%20Stand", "location": "B1 スクエア ゼロエリア", "displayCategory": "飲食"}, {"facility": "ヤエチカ", "category": "ファッション・雑貨", "name": "アシックス ウォーキング", "url": "https://www.yaechika.com/shop/", "location": "地下", "displayCategory": "ファッション・雑貨"}, {"facility": "ヤエチカ", "category": "ファッション・雑貨", "name": "アストリア", "url": "https://www.yaechika.com/shop/", "location": "地下", "displayCategory": "ファッション・雑貨"}, {"facility": "東京駅一番街", "category": "ファッション・雑貨", "name": "キャラトラステーション", "url": "https://www.tokyoeki-1bangai.co.jp/shop/", "location": "B1 東京駅一番街", "displayCategory": "ファッション・雑貨"}, {"facility": "東京駅一番街", "category": "ファッション・雑貨", "name": "サックスバー", "url": "https://www.tokyoeki-1bangai.co.jp/shop/", "location": "B1", "displayCategory": "飲食"}, {"facility": "KITTE丸の内", "category": "キャラクター・グッズ", "name": "MARcourt", "url": "https://marunouchi.jp-kitte.jp/shop/", "location": "2F", "displayCategory": "キャラクター・グッズ"}, {"facility": "KITTE丸の内", "category": "キャラクター・グッズ", "name": "NECNOK", "url": "https://marunouchi.jp-kitte.jp/shop/", "location": "2F", "displayCategory": "キャラクター・グッズ"}, {"facility": "KITTE丸の内", "category": "キャラクター・グッズ", "name": "TANDEY MAAK", "url": "https://marunouchi.jp-kitte.jp/shop/", "location": "2F", "displayCategory": "キャラクター・グッズ"}, {"facility": "KITTE丸の内", "category": "キャラクター・グッズ", "name": "YANUK", "url": "https://marunouchi.jp-kitte.jp/shop/", "location": "2F", "displayCategory": "キャラクター・グッズ"}, {"facility": "KITTE丸の内", "category": "キャラクター・グッズ", "name": "nop de nod", "url": "https://marunouchi.jp-kitte.jp/shop/", "location": "2F", "displayCategory": "キャラクター・グッズ"}, {"facility": "KITTE丸の内", "category": "キャラクター・グッズ", "name": "石見銀山 群言堂", "url": "https://marunouchi.jp-kitte.jp/shop/", "location": "2F", "displayCategory": "キャラクター・グッズ"}, {"facility": "KITTE丸の内", "category": "キャラクター・グッズ", "name": "H TOKYO", "url": "https://marunouchi.jp-kitte.jp/shop/", "location": "3F", "displayCategory": "キャラクター・グッズ"}, {"facility": "KITTE丸の内", "category": "キャラクター・グッズ", "name": "OVERRIDE", "url": "https://marunouchi.jp-kitte.jp/shop/", "location": "3F", "displayCategory": "キャラクター・グッズ"}, {"facility": "KITTE丸の内", "category": "キャラクター・グッズ", "name": "Onitsuka Tiger", "url": "https://marunouchi.jp-kitte.jp/shop/", "location": "3F", "displayCategory": "キャラクター・グッズ"}, {"facility": "KITTE丸の内", "category": "キャラクター・グッズ", "name": "azabu tailor", "url": "https://marunouchi.jp-kitte.jp/shop/", "location": "3F", "displayCategory": "キャラクター・グッズ"}, {"facility": "KITTE丸の内", "category": "キャラクター・グッズ", "name": "nest Robe / CONFECT", "url": "https://marunouchi.jp-kitte.jp/shop/", "location": "3F", "displayCategory": "キャラクター・グッズ"}, {"facility": "KITTE丸の内", "category": "キャラクター・グッズ", "name": "金子眼鏡店", "url": "https://marunouchi.jp-kitte.jp/shop/", "location": "3F", "displayCategory": "キャラクター・グッズ"}, {"facility": "KITTE丸の内", "category": "キャラクター・グッズ", "name": "MAMMUT", "url": "https://marunouchi.jp-kitte.jp/shop/", "location": "4F", "displayCategory": "キャラクター・グッズ"}, {"facility": "東京駅一番街", "category": "サービス・その他", "name": "アンリ・シャルパンティエ", "url": "https://www.tokyoeki-1bangai.co.jp/shop/", "location": "1F 東京ギフトパレット", "displayCategory": "ファッション・雑貨・サービス"}, {"facility": "グランスタ東京", "category": "サービス・その他", "name": "Be! FRUITS SANDWICH", "url": "https://www.gransta.jp/search/shop/?s=Be%21%20FRUITS%20SANDWICH", "location": "1F 中央通路エリア", "displayCategory": "ファッション・雑貨・サービス"}, {"facility": "東京駅一番街", "category": "飲食", "name": "京橋千疋屋", "url": "https://www.tokyoeki-1bangai.co.jp/shop/", "location": "B1", "displayCategory": "飲食"}, {"facility": "KITTE丸の内", "category": "飲食", "name": "BURDIGALA STAND", "url": "https://marunouchi.jp-kitte.jp/shop/", "location": "1F", "displayCategory": "飲食"}, {"facility": "KITTE丸の内", "category": "飲食", "name": "Beer&Spice", "url": "https://marunouchi.jp-kitte.jp/shop/", "location": "1F", "displayCategory": "飲食"}, {"facility": "KITTE丸の内", "category": "飲食", "name": "おばんざい・炙り焼き・酒 菜な", "url": "https://marunouchi.jp-kitte.jp/shop/", "location": "5F", "displayCategory": "飲食"}, {"facility": "KITTE丸の内", "category": "飲食", "name": "信州松本ヒカリヤ", "url": "https://marunouchi.jp-kitte.jp/shop/", "location": "5F", "displayCategory": "飲食"}, {"facility": "KITTE丸の内", "category": "飲食", "name": "博多もつ鍋 幸 とりもつえん", "url": "https://marunouchi.jp-kitte.jp/shop/", "location": "5F", "displayCategory": "飲食"}, {"facility": "KITTE丸の内", "category": "飲食", "name": "名産伊勢肉 豚捨", "url": "https://marunouchi.jp-kitte.jp/shop/", "location": "5F", "displayCategory": "飲食"}, {"facility": "KITTE丸の内", "category": "飲食", "name": "回転寿司 根室花まる", "url": "https://marunouchi.jp-kitte.jp/shop/", "location": "5F", "displayCategory": "飲食"}, {"facility": "KITTE丸の内", "category": "飲食", "name": "神戸・六甲道 ぎゅんた", "url": "https://marunouchi.jp-kitte.jp/shop/", "location": "5F", "displayCategory": "飲食"}, {"facility": "KITTE丸の内", "category": "飲食", "name": "鯛塩そば 灯花", "url": "https://marunouchi.jp-kitte.jp/shop/", "location": "5F", "displayCategory": "飲食"}, {"facility": "KITTE丸の内", "category": "飲食", "name": "MAINLAND CHINA 丸の内テラス 過門香", "url": "https://marunouchi.jp-kitte.jp/shop/", "location": "6F", "displayCategory": "飲食"}, {"facility": "KITTE丸の内", "category": "飲食", "name": "アルカナ東京", "url": "https://marunouchi.jp-kitte.jp/shop/", "location": "6F", "displayCategory": "飲食"}, {"facility": "KITTE丸の内", "category": "飲食", "name": "炭焼・寿し処 くし路 KUSHIRO", "url": "https://marunouchi.jp-kitte.jp/shop/", "location": "6F", "displayCategory": "飲食"}, {"facility": "KITTE丸の内", "category": "飲食", "name": "金華豚料理 平田牧場 極", "url": "https://marunouchi.jp-kitte.jp/shop/", "location": "6F", "displayCategory": "飲食"}, {"facility": "KITTE丸の内", "category": "飲食", "name": "魚匠 銀平 丸の内店", "url": "https://marunouchi.jp-kitte.jp/shop/", "location": "6F", "displayCategory": "飲食"}, {"facility": "KITTE丸の内", "category": "飲食", "name": "THE BIFTEKI", "url": "https://marunouchi.jp-kitte.jp/shop/", "location": "B1", "displayCategory": "飲食"}, {"facility": "KITTE丸の内", "category": "飲食", "name": "かね田", "url": "https://marunouchi.jp-kitte.jp/shop/", "location": "B1", "displayCategory": "飲食"}, {"facility": "KITTE丸の内", "category": "飲食", "name": "中華そば 福味", "url": "https://marunouchi.jp-kitte.jp/shop/", "location": "B1", "displayCategory": "飲食"}, {"facility": "KITTE丸の内", "category": "飲食", "name": "東京スタイルみそらーめん ど・みそ", "url": "https://marunouchi.jp-kitte.jp/shop/", "location": "B1", "displayCategory": "飲食"}, {"facility": "東京駅一番街", "category": "食品・スイーツ", "name": "ブリュレメリゼ", "url": "https://www.tokyoeki-1bangai.co.jp/shop/", "location": "1F 東京ギフトパレット", "displayCategory": "食品"}, {"facility": "グランスタ丸の内", "category": "サービス・その他", "name": "QBハウス", "url": "https://www.gransta.jp/search/shop/?s=QB%E3%83%8F%E3%82%A6%E3%82%B9", "location": "B1 丸の内地下北口改札", "displayCategory": "ファッション・雑貨・サービス"}, {"facility": "グランスタ東京", "category": "飲食", "name": "THE CITY BAKERY ＋ Bar & Grill", "url": "https://www.gransta.jp/search/shop/?s=THE%20CITY%20BAKERY%20%EF%BC%8B%20Bar%20%26%20Grill", "location": "B1 地下丸の内改札内エリア", "displayCategory": "飲食"}, {"facility": "グランスタ東京", "category": "飲食", "name": "THE STANDARD BAKERS TOKYO", "url": "https://www.gransta.jp/search/shop/?s=THE%20STANDARD%20BAKERS%20TOKYO", "location": "1F 中央通路エリア", "displayCategory": "飲食"}, {"facility": "グランスタ東京", "category": "飲食", "name": "東京あんぱん豆一豆", "url": "https://www.gransta.jp/search/shop/?s=%E6%9D%B1%E4%BA%AC%E3%81%82%E3%82%93%E3%81%B1%E3%82%93%E8%B1%86%E4%B8%80%E8%B1%86", "location": "1F 京葉ストリートエリア", "displayCategory": "飲食"}, {"facility": "グランスタ東京", "category": "飲食", "name": "デイジイ東京", "url": "https://www.gransta.jp/search/shop/?s=%E3%83%87%E3%82%A4%E3%82%B8%E3%82%A4%E6%9D%B1%E4%BA%AC", "location": "1F 北通路エリア", "displayCategory": "飲食"}, {"facility": "グランスタ東京", "category": "飲食", "name": "Curly's Croissant TOKYO BAKE STAND", "url": "https://www.gransta.jp/search/shop/?s=Curly%27s%20Croissant%20TOKYO%20BAKE%20STAND", "location": "B1 スクエア ゼロエリア", "displayCategory": "飲食"}, {"facility": "グランスタ東京", "category": "飲食", "name": "BURDIGALA TOKYO", "url": "https://www.gransta.jp/search/shop/?s=BURDIGALA%20TOKYO", "location": "B1 銀の鈴エリア", "displayCategory": "飲食"}, {"facility": "グランスタ東京", "category": "サービス・その他", "name": "じゃがボルダ", "url": "https://www.gransta.jp/search/shop/?s=%E3%81%98%E3%82%83%E3%81%8C%E3%83%9C%E3%83%AB%E3%83%80", "location": "1F 吹き抜けエリア", "displayCategory": "ファッション・雑貨・サービス"}, {"facility": "KITTE丸の内", "category": "キャラクター・グッズ", "name": "+S Spiral Market丸の内", "url": "https://marunouchi.jp-kitte.jp/shop/", "location": "1F", "displayCategory": "キャラクター・グッズ"}, {"facility": "KITTE丸の内", "category": "キャラクター・グッズ", "name": "伊織／シン・エヒメ", "url": "https://marunouchi.jp-kitte.jp/shop/", "location": "2F", "displayCategory": "キャラクター・グッズ"}, {"facility": "KITTE丸の内", "category": "キャラクター・グッズ", "name": "ARMONIA丸の内", "url": "https://marunouchi.jp-kitte.jp/shop/", "location": "3F", "displayCategory": "キャラクター・グッズ"}, {"facility": "KITTE丸の内", "category": "キャラクター・グッズ", "name": "MUJI to GO", "url": "https://marunouchi.jp-kitte.jp/shop/", "location": "3F", "displayCategory": "キャラクター・グッズ"}, {"facility": "KITTE丸の内", "category": "キャラクター・グッズ", "name": "Hacoa DIRECT STORE", "url": "https://marunouchi.jp-kitte.jp/shop/", "location": "4F", "displayCategory": "キャラクター・グッズ"}, {"facility": "KITTE丸の内", "category": "キャラクター・グッズ", "name": "アンジェ ビュロー", "url": "https://marunouchi.jp-kitte.jp/shop/", "location": "4F", "displayCategory": "キャラクター・グッズ"}, {"facility": "KITTE丸の内", "category": "キャラクター・グッズ", "name": "中川政七商店", "url": "https://marunouchi.jp-kitte.jp/shop/", "location": "4F", "displayCategory": "キャラクター・グッズ"}, {"facility": "KITTE丸の内", "category": "キャラクター・グッズ", "name": "北麓草水", "url": "https://marunouchi.jp-kitte.jp/shop/", "location": "4F", "displayCategory": "キャラクター・グッズ"}, {"facility": "KITTE丸の内", "category": "キャラクター・グッズ", "name": "能作", "url": "https://marunouchi.jp-kitte.jp/shop/", "location": "4F", "displayCategory": "キャラクター・グッズ"}, {"facility": "東京駅一番街", "category": "サービス・その他", "name": "東京ラスク", "url": "https://www.tokyoeki-1bangai.co.jp/shop/", "location": "1F 東京ギフトパレット", "displayCategory": "ファッション・雑貨・サービス"}, {"facility": "グランスタ東京", "category": "飲食", "name": "雷 東京本丸店", "url": "https://www.gransta.jp/search/shop/?s=%E9%9B%B7%20%E6%9D%B1%E4%BA%AC%E6%9C%AC%E4%B8%B8%E5%BA%97", "location": "1F 吹き抜けエリア", "displayCategory": "飲食"}, {"facility": "東京駅一番街", "category": "飲食", "name": "塩らーめん専門 ひるがお", "url": "https://www.tokyoeki-1bangai.co.jp/shop/", "location": "B1 東京ラーメンストリート", "displayCategory": "飲食"}, {"facility": "東京駅一番街", "category": "飲食", "name": "家系ラーメン 革新家 TOKYO", "url": "https://www.tokyoeki-1bangai.co.jp/shop/", "location": "B1 東京ラーメンストリート", "displayCategory": "飲食"}, {"facility": "グランスタ丸の内", "category": "サービス・その他", "name": "Raffine", "url": "https://www.gransta.jp/search/shop/?s=Raffine", "location": "B1 丸の内地下北口改札", "displayCategory": "ファッション・雑貨・サービス"}, {"facility": "グランスタ丸の内", "category": "キャラクター・グッズ", "name": "LUSSO Rain gear shop", "url": "https://www.gransta.jp/search/shop/?s=LUSSO%20Rain%20gear%20shop", "location": "B1 丸の内地下北口改札", "displayCategory": "キャラクター・グッズ"}, {"facility": "ヤエチカ", "category": "飲食", "name": "うなぎ乃助", "url": "https://www.yaechika.com/shop/", "location": "地下", "displayCategory": "飲食"}, {"facility": "ヤエチカ", "category": "飲食", "name": "アルプス", "url": "https://www.yaechika.com/shop/", "location": "地下", "displayCategory": "飲食"}, {"facility": "ヤエチカ", "category": "飲食", "name": "アロマ珈琲", "url": "https://www.yaechika.com/shop/", "location": "地下", "displayCategory": "飲食"}, {"facility": "ヤエチカ", "category": "飲食", "name": "アンテナアメリカ", "url": "https://www.yaechika.com/shop/", "location": "地下", "displayCategory": "飲食"}, {"facility": "ヤエチカ", "category": "飲食", "name": "カリガリ", "url": "https://www.yaechika.com/shop/", "location": "地下", "displayCategory": "飲食"}, {"facility": "グランスタ丸の内", "category": "飲食", "name": "WK2", "url": "https://www.gransta.jp/search/shop/?s=WK2", "location": "B1 丸の内地下中央口改札", "displayCategory": "飲食"}, {"facility": "グランスタ丸の内", "category": "飲食", "name": "いろり庵きらく", "url": "https://www.gransta.jp/search/shop/?s=%E3%81%84%E3%82%8D%E3%82%8A%E5%BA%B5%E3%81%8D%E3%82%89%E3%81%8F", "location": "B1 丸の内地下北口改札", "displayCategory": "飲食"}, {"facility": "グランスタ丸の内", "category": "飲食", "name": "築地すし好 和", "url": "https://www.gransta.jp/search/shop/?s=%E7%AF%89%E5%9C%B0%E3%81%99%E3%81%97%E5%A5%BD%20%E5%92%8C", "location": "B1 丸の内地下北口改札", "displayCategory": "飲食"}, {"facility": "グランスタ八重洲", "category": "飲食", "name": "Osteria IL VIAGGIO", "url": "https://www.gransta.jp/search/shop/?s=Osteria%20IL%20VIAGGIO", "location": "2F", "displayCategory": "飲食"}, {"facility": "グランスタ八重洲", "category": "飲食", "name": "VOLPUTAS OLIVEOIL DINING TOKYO", "url": "https://www.gransta.jp/search/shop/?s=VOLPUTAS%20OLIVEOIL%20DINING%20TOKYO", "location": "2F", "displayCategory": "飲食"}, {"facility": "グランスタ八重洲", "category": "飲食", "name": "常陸野ブルーイング Tokyo Yaesu", "url": "https://www.gransta.jp/search/shop/?s=%E5%B8%B8%E9%99%B8%E9%87%8E%E3%83%96%E3%83%AB%E3%83%BC%E3%82%A4%E3%83%B3%E3%82%B0%20Tokyo%20Yaesu", "location": "2F", "displayCategory": "飲食"}, {"facility": "グランスタ八重洲", "category": "飲食", "name": "ACORN", "url": "https://www.gransta.jp/search/shop/?s=ACORN", "location": "B1", "displayCategory": "飲食"}, {"facility": "グランスタ八重洲", "category": "飲食", "name": "Gigas Seafood Bar", "url": "https://www.gransta.jp/search/shop/?s=Gigas%20Seafood%20Bar", "location": "B1", "displayCategory": "飲食"}, {"facility": "グランスタ八重洲", "category": "飲食", "name": "HAMBURG WORKS", "url": "https://www.gransta.jp/search/shop/?s=HAMBURG%20WORKS", "location": "B1", "displayCategory": "飲食"}, {"facility": "グランスタ八重洲", "category": "飲食", "name": "うなぎ 成田新川", "url": "https://www.gransta.jp/search/shop/?s=%E3%81%86%E3%81%AA%E3%81%8E%20%E6%88%90%E7%94%B0%E6%96%B0%E5%B7%9D", "location": "B1", "displayCategory": "飲食"}, {"facility": "グランスタ八重洲", "category": "飲食", "name": "みそかつ 矢場とん グランスタ八重洲店", "url": "https://www.gransta.jp/search/shop/?s=%E3%81%BF%E3%81%9D%E3%81%8B%E3%81%A4%20%E7%9F%A2%E5%A0%B4%E3%81%A8%E3%82%93%20%E3%82%B0%E3%83%A9%E3%83%B3%E3%82%B9%E3%82%BF%E5%85%AB%E9%87%8D%E6%B4%B2%E5%BA%97", "location": "B1", "displayCategory": "飲食"}, {"facility": "グランスタ八重洲", "category": "飲食", "name": "ワイン食堂 旅する子ブタ", "url": "https://www.gransta.jp/search/shop/?s=%E3%83%AF%E3%82%A4%E3%83%B3%E9%A3%9F%E5%A0%82%20%E6%97%85%E3%81%99%E3%82%8B%E5%AD%90%E3%83%96%E3%82%BF", "location": "B1", "displayCategory": "飲食"}, {"facility": "グランスタ八重洲", "category": "飲食", "name": "仙臺たんや 利久", "url": "https://www.gransta.jp/search/shop/?s=%E4%BB%99%E8%87%BA%E3%81%9F%E3%82%93%E3%82%84%20%E5%88%A9%E4%B9%85", "location": "B1", "displayCategory": "飲食"}, {"facility": "グランスタ八重洲", "category": "飲食", "name": "北海道バル 海", "url": "https://www.gransta.jp/search/shop/?s=%E5%8C%97%E6%B5%B7%E9%81%93%E3%83%90%E3%83%AB%20%E6%B5%B7", "location": "B1", "displayCategory": "飲食"}, {"facility": "グランスタ八重洲", "category": "飲食", "name": "天ぷら 天喜代", "url": "https://www.gransta.jp/search/shop/?s=%E5%A4%A9%E3%81%B7%E3%82%89%20%E5%A4%A9%E5%96%9C%E4%BB%A3", "location": "B1", "displayCategory": "飲食"}, {"facility": "グランスタ八重洲", "category": "飲食", "name": "月島もんじゃ くうや 東京駅", "url": "https://www.gransta.jp/search/shop/?s=%E6%9C%88%E5%B3%B6%E3%82%82%E3%82%93%E3%81%98%E3%82%83%20%E3%81%8F%E3%81%86%E3%82%84%20%E6%9D%B1%E4%BA%AC%E9%A7%85", "location": "B1", "displayCategory": "飲食"}, {"facility": "グランスタ八重洲", "category": "飲食", "name": "神座飲茶樓", "url": "https://www.gransta.jp/search/shop/?s=%E7%A5%9E%E5%BA%A7%E9%A3%B2%E8%8C%B6%E6%A8%93", "location": "B1", "displayCategory": "飲食"}, {"facility": "グランスタ八重洲", "category": "飲食", "name": "神戸牛ダイア グランスタ八重洲店", "url": "https://www.gransta.jp/search/shop/?s=%E7%A5%9E%E6%88%B8%E7%89%9B%E3%83%80%E3%82%A4%E3%82%A2%20%E3%82%B0%E3%83%A9%E3%83%B3%E3%82%B9%E3%82%BF%E5%85%AB%E9%87%8D%E6%B4%B2%E5%BA%97", "location": "B1", "displayCategory": "飲食"}, {"facility": "グランスタ八重洲", "category": "飲食", "name": "築地寿司清", "url": "https://www.gransta.jp/search/shop/?s=%E7%AF%89%E5%9C%B0%E5%AF%BF%E5%8F%B8%E6%B8%85", "location": "B1", "displayCategory": "飲食"}, {"facility": "グランスタ八重洲", "category": "飲食", "name": "餃子百珍 一味玲玲", "url": "https://www.gransta.jp/search/shop/?s=%E9%A4%83%E5%AD%90%E7%99%BE%E7%8F%8D%20%E4%B8%80%E5%91%B3%E7%8E%B2%E7%8E%B2", "location": "B1", "displayCategory": "飲食"}, {"facility": "グランスタ八重洲", "category": "飲食", "name": "鳥元", "url": "https://www.gransta.jp/search/shop/?s=%E9%B3%A5%E5%85%83", "location": "B1", "displayCategory": "飲食"}, {"facility": "グランスタ八重洲", "category": "飲食", "name": "浅草寿司場 ひなと丸", "url": "https://www.gransta.jp/search/shop/?s=%E6%B5%85%E8%8D%89%E5%AF%BF%E5%8F%B8%E5%A0%B4%20%E3%81%B2%E3%81%AA%E3%81%A8%E4%B8%B8", "location": "M2", "displayCategory": "飲食"}, {"facility": "グランスタ東京", "category": "飲食", "name": "THE BEAT DINER", "url": "https://www.gransta.jp/search/shop/?s=THE%20BEAT%20DINER", "location": "1F 北通路エリア", "displayCategory": "飲食"}, {"facility": "グランスタ東京", "category": "飲食", "name": "そばいち", "url": "https://www.gransta.jp/search/shop/?s=%E3%81%9D%E3%81%B0%E3%81%84%E3%81%A1", "location": "1F 吹き抜けエリア", "displayCategory": "飲食"}, {"facility": "グランスタ東京", "category": "飲食", "name": "T'sたんたん", "url": "https://www.gransta.jp/search/shop/?s=T%27s%E3%81%9F%E3%82%93%E3%81%9F%E3%82%93", "location": "B1 スクエア ゼロエリア", "displayCategory": "飲食"}, {"facility": "グランスタ東京", "category": "飲食", "name": "なかよし", "url": "https://www.gransta.jp/search/shop/?s=%E3%81%AA%E3%81%8B%E3%82%88%E3%81%97", "location": "B1 スクエア ゼロエリア", "displayCategory": "飲食"}, {"facility": "グランスタ東京", "category": "飲食", "name": "北出TACOS", "url": "https://www.gransta.jp/search/shop/?s=%E5%8C%97%E5%87%BATACOS", "location": "B1 スクエア ゼロエリア", "displayCategory": "飲食"}, {"facility": "グランスタ東京", "category": "飲食", "name": "羽田市場", "url": "https://www.gransta.jp/search/shop/?s=%E7%BE%BD%E7%94%B0%E5%B8%82%E5%A0%B4", "location": "B1 スクエア ゼロエリア", "displayCategory": "飲食"}, {"facility": "グランスタ東京", "category": "飲食", "name": "THE CITY BAKERY ＋ Bar & Grill", "url": "https://www.gransta.jp/search/shop/?s=THE%20CITY%20BAKERY%20%EF%BC%8B%20Bar%20%26%20Grill", "location": "B1 地下丸の内改札内エリア", "displayCategory": "飲食"}, {"facility": "グランスタ東京", "category": "飲食", "name": "TOKYO PASTA STATION", "url": "https://www.gransta.jp/search/shop/?s=TOKYO%20PASTA%20STATION", "location": "B1 地下丸の内改札内エリア", "displayCategory": "飲食"}, {"facility": "グランスタ東京", "category": "飲食", "name": "NIPPON RAMEN 凛 RIN TOKYO", "url": "https://www.gransta.jp/search/shop/?s=NIPPON%20RAMEN%20%E5%87%9B%20RIN%20TOKYO", "location": "B1 銀の鈴エリア", "displayCategory": "飲食"}, {"facility": "グランスタ東京", "category": "飲食", "name": "南国酒家 47china", "url": "https://www.gransta.jp/search/shop/?s=%E5%8D%97%E5%9B%BD%E9%85%92%E5%AE%B6%2047china", "location": "B1 スクエア ゼロエリア", "displayCategory": "飲食"}, {"facility": "グランスタ丸の内", "category": "食品・スイーツ", "name": "Biople", "url": "https://www.gransta.jp/search/shop/?s=Biople", "location": "B1 丸の内地下中央口改札", "displayCategory": "食品"}, {"facility": "グランスタ丸の内", "category": "美容・ヘルスケア", "name": "ROAliv", "url": "https://www.gransta.jp/search/shop/?s=ROAliv", "location": "B1 グランスタ丸の内", "displayCategory": "ファッション・雑貨・サービス"}, {"facility": "グランスタ東京", "category": "食品・スイーツ", "name": "nuevo by BUNMEIDO", "url": "https://www.gransta.jp/search/shop/?s=nuevo%20by%20BUNMEIDO", "location": "1F 中央通路エリア", "displayCategory": "食品"}, {"facility": "グランスタ東京", "category": "食品・スイーツ", "name": "菓匠三全", "url": "https://www.gransta.jp/search/shop/?s=%E8%8F%93%E5%8C%A0%E4%B8%89%E5%85%A8", "location": "1F 中央通路エリア", "displayCategory": "食品"}, {"facility": "グランスタ東京", "category": "食品・スイーツ", "name": "たまご専門 本巣ヱ", "url": "https://www.gransta.jp/search/shop/?s=%E3%81%9F%E3%81%BE%E3%81%94%E5%B0%82%E9%96%80%20%E6%9C%AC%E5%B7%A3%E3%83%B1", "location": "B1 地下丸の内改札内", "displayCategory": "食品"}, {"facility": "グランスタ東京", "category": "食品・スイーツ", "name": "MIYUKA", "url": "https://www.gransta.jp/search/shop/?s=MIYUKA", "location": "B1 銀の鈴エリア", "displayCategory": "食品"}, {"facility": "グランスタ東京", "category": "食品・スイーツ", "name": "富士見堂", "url": "https://www.gransta.jp/search/shop/?s=%E5%AF%8C%E5%A3%AB%E8%A6%8B%E5%A0%82", "location": "B1 銀の鈴エリア", "displayCategory": "食品"}, {"facility": "グランスタ東京", "category": "食品・スイーツ", "name": "御門屋TOKYO", "url": "https://www.gransta.jp/search/shop/?s=%E5%BE%A1%E9%96%80%E5%B1%8BTOKYO", "location": "B1 銀の鈴エリア", "displayCategory": "食品"}, {"facility": "グランスタ東京", "category": "食品・スイーツ", "name": "桂新堂 これこれしかじか", "url": "https://www.gransta.jp/search/shop/?s=%E6%A1%82%E6%96%B0%E5%A0%82%20%E3%81%93%E3%82%8C%E3%81%93%E3%82%8C%E3%81%97%E3%81%8B%E3%81%98%E3%81%8B", "location": "B1 銀の鈴エリア", "displayCategory": "食品"}, {"facility": "グランスタ東京", "category": "食品・スイーツ", "name": "船橋屋 こよみ", "url": "https://www.gransta.jp/search/shop/?s=%E8%88%B9%E6%A9%8B%E5%B1%8B%20%E3%81%93%E3%82%88%E3%81%BF", "location": "B1 銀の鈴エリア", "displayCategory": "食品"}, {"facility": "グランスタ東京", "category": "食品・スイーツ", "name": "銀座甘楽", "url": "https://www.gransta.jp/search/shop/?s=%E9%8A%80%E5%BA%A7%E7%94%98%E6%A5%BD", "location": "B1 銀の鈴エリア", "displayCategory": "食品"}, {"facility": "グランスタ東京", "category": "食品・スイーツ", "name": "香炉庵 KOURO-AN", "url": "https://www.gransta.jp/search/shop/?s=%E9%A6%99%E7%82%89%E5%BA%B5%20KOURO-AN", "location": "B1 銀の鈴エリア", "displayCategory": "食品"}, {"facility": "グランスタ丸の内", "category": "飲食", "name": "茅乃舎", "url": "https://www.gransta.jp/search/shop/?s=%E8%8C%85%E4%B9%83%E8%88%8E", "location": "B1 丸の内地下中央口改札", "displayCategory": "飲食"}, {"facility": "グランスタ東京", "category": "飲食", "name": "回転寿司 羽田市場", "url": "https://www.gransta.jp/search/shop/?s=%E5%9B%9E%E8%BB%A2%E5%AF%BF%E5%8F%B8%20%E7%BE%BD%E7%94%B0%E5%B8%82%E5%A0%B4", "location": "B1 スクエア ゼロエリア", "displayCategory": "飲食"}, {"facility": "グランスタ東京", "category": "飲食", "name": "天然本まぐろ ありそ鮨し", "url": "https://www.gransta.jp/search/shop/?s=%E5%A4%A9%E7%84%B6%E6%9C%AC%E3%81%BE%E3%81%90%E3%82%8D%20%E3%81%82%E3%82%8A%E3%81%9D%E9%AE%A8%E3%81%97", "location": "1F 中央通路エリア", "displayCategory": "飲食"}, {"facility": "グランスタ東京", "category": "飲食", "name": "魚力海鮮寿司", "url": "https://www.gransta.jp/search/shop/?s=%E9%AD%9A%E5%8A%9B%E6%B5%B7%E9%AE%AE%E5%AF%BF%E5%8F%B8", "location": "1F 京葉ストリートエリア", "displayCategory": "飲食"}, {"facility": "東京駅一番街", "category": "飲食", "name": "産直グルメ回転ずし 函太郎 Tokyo", "url": "https://www.tokyoeki-1bangai.co.jp/shop/", "location": "B1", "displayCategory": "飲食"}, {"facility": "グランスタ丸の内", "category": "食品・スイーツ", "name": "サカナバッカ グランスタ丸の内店", "url": "https://www.gransta.jp/search/shop/?s=%E3%82%B5%E3%82%AB%E3%83%8A%E3%83%90%E3%83%83%E3%82%AB%20%E3%82%B0%E3%83%A9%E3%83%B3%E3%82%B9%E3%82%BF%E4%B8%B8%E3%81%AE%E5%86%85%E5%BA%97", "location": "B1", "displayCategory": "食品"}, {"facility": "グランスタ丸の内", "category": "食品・スイーツ", "name": "mango tree kitchen GAPAO", "url": "https://www.gransta.jp/search/shop/?s=mango%20tree%20kitchen%20GAPAO", "location": "B1 丸の内地下中央口改札", "displayCategory": "食品"}, {"facility": "グランスタ東京", "category": "食品・スイーツ", "name": "神戸コロッケ", "url": "https://www.gransta.jp/search/shop/?s=%E7%A5%9E%E6%88%B8%E3%82%B3%E3%83%AD%E3%83%83%E3%82%B1", "location": "1F 中央通路エリア", "displayCategory": "食品"}, {"facility": "グランスタ東京", "category": "食品・スイーツ", "name": "仙臺たんや利久 グランスタ東京 京葉ストリート店", "url": "https://www.gransta.jp/search/shop/?s=%E4%BB%99%E8%87%BA%E3%81%9F%E3%82%93%E3%82%84%E5%88%A9%E4%B9%85%20%E3%82%B0%E3%83%A9%E3%83%B3%E3%82%B9%E3%82%BF%E6%9D%B1%E4%BA%AC%20%E4%BA%AC%E8%91%89%E3%82%B9%E3%83%88%E3%83%AA%E3%83%BC%E3%83%88%E5%BA%97", "location": "1F 京葉ストリートエリア", "displayCategory": "食品"}, {"facility": "グランスタ東京", "category": "食品・スイーツ", "name": "CITYSHOP", "url": "https://www.gransta.jp/search/shop/?s=CITYSHOP", "location": "1F 北通路エリア", "displayCategory": "食品"}, {"facility": "グランスタ東京", "category": "食品・スイーツ", "name": "Mr.Chicken鶏飯店", "url": "https://www.gransta.jp/search/shop/?s=Mr.Chicken%E9%B6%8F%E9%A3%AF%E5%BA%97", "location": "B1 スクエア ゼロエリア", "displayCategory": "食品"}, {"facility": "グランスタ東京", "category": "食品・スイーツ", "name": "ONI＆Co.", "url": "https://www.gransta.jp/search/shop/?s=ONI%EF%BC%86Co.", "location": "B1 スクエア ゼロエリア", "displayCategory": "食品"}, {"facility": "グランスタ東京", "category": "食品・スイーツ", "name": "RF1", "url": "https://www.gransta.jp/search/shop/?s=RF1", "location": "B1 スクエア ゼロエリア", "displayCategory": "食品"}, {"facility": "グランスタ東京", "category": "食品・スイーツ", "name": "いなりすし 豆狸", "url": "https://www.gransta.jp/search/shop/?s=%E3%81%84%E3%81%AA%E3%82%8A%E3%81%99%E3%81%97%20%E8%B1%86%E7%8B%B8", "location": "B1 スクエア ゼロエリア", "displayCategory": "食品"}, {"facility": "グランスタ東京", "category": "食品・スイーツ", "name": "つきじ喜代村", "url": "https://www.gransta.jp/search/shop/?s=%E3%81%A4%E3%81%8D%E3%81%98%E5%96%9C%E4%BB%A3%E6%9D%91", "location": "B1 スクエア ゼロエリア", "displayCategory": "食品"}, {"facility": "グランスタ東京", "category": "食品・スイーツ", "name": "てとて", "url": "https://www.gransta.jp/search/shop/?s=%E3%81%A6%E3%81%A8%E3%81%A6", "location": "B1 スクエア ゼロエリア", "displayCategory": "食品"}, {"facility": "グランスタ東京", "category": "食品・スイーツ", "name": "とんかつ まい泉", "url": "https://www.gransta.jp/search/shop/?s=%E3%81%A8%E3%82%93%E3%81%8B%E3%81%A4%20%E3%81%BE%E3%81%84%E6%B3%89", "location": "B1 スクエア ゼロエリア", "displayCategory": "食品"}, {"facility": "グランスタ東京", "category": "食品・スイーツ", "name": "ゐざさ茶屋", "url": "https://www.gransta.jp/search/shop/?s=%E3%82%90%E3%81%96%E3%81%95%E8%8C%B6%E5%B1%8B", "location": "B1 スクエア ゼロエリア", "displayCategory": "食品"}, {"facility": "グランスタ東京", "category": "食品・スイーツ", "name": "オーベルジーヌ", "url": "https://www.gransta.jp/search/shop/?s=%E3%82%AA%E3%83%BC%E3%83%99%E3%83%AB%E3%82%B8%E3%83%BC%E3%83%8C", "location": "B1 スクエア ゼロエリア", "displayCategory": "食品"}, {"facility": "グランスタ東京", "category": "食品・スイーツ", "name": "サンドイッチハウス メルヘン", "url": "https://www.gransta.jp/search/shop/?s=%E3%82%B5%E3%83%B3%E3%83%89%E3%82%A4%E3%83%83%E3%83%81%E3%83%8F%E3%82%A6%E3%82%B9%20%E3%83%A1%E3%83%AB%E3%83%98%E3%83%B3", "location": "B1 スクエア ゼロエリア", "displayCategory": "食品"}, {"facility": "グランスタ東京", "category": "食品・スイーツ", "name": "伊達の牛たん本舗", "url": "https://www.gransta.jp/search/shop/?s=%E4%BC%8A%E9%81%94%E3%81%AE%E7%89%9B%E3%81%9F%E3%82%93%E6%9C%AC%E8%88%97", "location": "B1 スクエア ゼロエリア", "displayCategory": "食品"}, {"facility": "グランスタ東京", "category": "食品・スイーツ", "name": "台湾料理専門店 台湾１０１", "url": "https://www.gransta.jp/search/shop/?s=%E5%8F%B0%E6%B9%BE%E6%96%99%E7%90%86%E5%B0%82%E9%96%80%E5%BA%97%20%E5%8F%B0%E6%B9%BE%EF%BC%91%EF%BC%90%EF%BC%91", "location": "B1 スクエア ゼロエリア", "displayCategory": "食品"}, {"facility": "グランスタ東京", "category": "食品・スイーツ", "name": "名古屋名物 みそかつ 矢場とん", "url": "https://www.gransta.jp/search/shop/?s=%E5%90%8D%E5%8F%A4%E5%B1%8B%E5%90%8D%E7%89%A9%20%E3%81%BF%E3%81%9D%E3%81%8B%E3%81%A4%20%E7%9F%A2%E5%A0%B4%E3%81%A8%E3%82%93", "location": "B1 スクエア ゼロエリア", "displayCategory": "食品"}, {"facility": "グランスタ東京", "category": "食品・スイーツ", "name": "和牛の壱丁田", "url": "https://www.gransta.jp/search/shop/?s=%E5%92%8C%E7%89%9B%E3%81%AE%E5%A3%B1%E4%B8%81%E7%94%B0", "location": "B1 スクエア ゼロエリア", "displayCategory": "食品"}, {"facility": "グランスタ東京", "category": "食品・スイーツ", "name": "崎陽軒", "url": "https://www.gransta.jp/search/shop/?s=%E5%B4%8E%E9%99%BD%E8%BB%92", "location": "B1 スクエア ゼロエリア", "displayCategory": "食品"}, {"facility": "グランスタ東京", "category": "食品・スイーツ", "name": "浅草今半", "url": "https://www.gransta.jp/search/shop/?s=%E6%B5%85%E8%8D%89%E4%BB%8A%E5%8D%8A", "location": "B1 スクエア ゼロエリア", "displayCategory": "食品"}, {"facility": "グランスタ東京", "category": "食品・スイーツ", "name": "焼き鳥 串くら 京都・御池", "url": "https://www.gransta.jp/search/shop/?s=%E7%84%BC%E3%81%8D%E9%B3%A5%20%E4%B8%B2%E3%81%8F%E3%82%89%20%E4%BA%AC%E9%83%BD%E3%83%BB%E5%BE%A1%E6%B1%A0", "location": "B1 スクエア ゼロエリア", "displayCategory": "食品"}, {"facility": "グランスタ東京", "category": "食品・スイーツ", "name": "駅弁つばめグリル", "url": "https://www.gransta.jp/search/shop/?s=%E9%A7%85%E5%BC%81%E3%81%A4%E3%81%B0%E3%82%81%E3%82%B0%E3%83%AA%E3%83%AB", "location": "B1 スクエア ゼロエリア", "displayCategory": "食品"}, {"facility": "グランスタ東京", "category": "食品・スイーツ", "name": "Deli comer", "url": "https://www.gransta.jp/search/shop/?s=Deli%20comer", "location": "1F 京葉ストリートエリア", "displayCategory": "食品"}, {"facility": "グランスタ東京", "category": "ファッション・雑貨", "name": "ほぼ日手帳ストア", "url": "https://www.gransta.jp/search/shop/?s=%E3%81%BB%E3%81%BC%E6%97%A5%E6%89%8B%E5%B8%B3%E3%82%B9%E3%83%88%E3%82%A2", "location": "B1 地下丸の内改札内", "displayCategory": "キャラクター・グッズ"}, {"facility": "グランスタ東京", "category": "飲食", "name": "はせがわ酒店 グランスタ東京店", "url": "https://www.gransta.jp/search/shop/?s=%E3%81%AF%E3%81%9B%E3%81%8C%E3%82%8F%E9%85%92%E5%BA%97%20%E3%82%B0%E3%83%A9%E3%83%B3%E3%82%B9%E3%82%BF%E6%9D%B1%E4%BA%AC%E5%BA%97", "location": "B1 スクエア ゼロエリア", "displayCategory": "飲食"}, {"facility": "グランスタ東京", "category": "サービス・その他", "name": "日本橋 天丼 天むす 金子半之助", "url": "https://www.gransta.jp/search/shop/?s=%E6%97%A5%E6%9C%AC%E6%A9%8B%20%E5%A4%A9%E4%B8%BC%20%E5%A4%A9%E3%82%80%E3%81%99%20%E9%87%91%E5%AD%90%E5%8D%8A%E4%B9%8B%E5%8A%A9", "location": "1F 京葉ストリートエリア", "displayCategory": "ファッション・雑貨・サービス"}, {"facility": "グランスタ東京", "category": "食品・スイーツ", "name": "COCORIS", "url": "https://www.gransta.jp/search/shop/?s=COCORIS", "location": "1F 中央通路エリア", "displayCategory": "食品"}, {"facility": "グランスタ東京", "category": "食品・スイーツ", "name": "Now on Cheese♪ Hello, Tokyo Station！", "url": "https://www.gransta.jp/search/shop/?s=Now%20on%20Cheese%E2%99%AA%20Hello%2C%20Tokyo%20Station%EF%BC%81", "location": "1F 中央通路エリア", "displayCategory": "食品"}, {"facility": "グランスタ東京", "category": "食品・スイーツ", "name": "薫るバター Sabrina", "url": "https://www.gransta.jp/search/shop/?s=%E8%96%AB%E3%82%8B%E3%83%90%E3%82%BF%E3%83%BC%20Sabrina", "location": "1F 中央通路エリア", "displayCategory": "食品"}, {"facility": "グランスタ東京", "category": "食品・スイーツ", "name": "ベルン", "url": "https://www.gransta.jp/search/shop/?s=%E3%83%99%E3%83%AB%E3%83%B3", "location": "1F 京葉ストリートエリア", "displayCategory": "食品"}, {"facility": "グランスタ東京", "category": "食品・スイーツ", "name": "(NO) RAISIN SANDWICH", "url": "https://www.gransta.jp/search/shop/?s=%28NO%29%20RAISIN%20SANDWICH", "location": "1F 吹き抜けエリア", "displayCategory": "食品"}, {"facility": "グランスタ東京", "category": "食品・スイーツ", "name": "ザ・メープルマニア", "url": "https://www.gransta.jp/search/shop/?s=%E3%82%B6%E3%83%BB%E3%83%A1%E3%83%BC%E3%83%97%E3%83%AB%E3%83%9E%E3%83%8B%E3%82%A2", "location": "1F 吹き抜けエリア", "displayCategory": "食品"}, {"facility": "グランスタ東京", "category": "食品・スイーツ", "name": "ガトーフェスタ ハラダ", "url": "https://www.gransta.jp/search/shop/?s=%E3%82%AC%E3%83%88%E3%83%BC%E3%83%95%E3%82%A7%E3%82%B9%E3%82%BF%20%E3%83%8F%E3%83%A9%E3%83%80", "location": "B1 スクエア ゼロエリア", "displayCategory": "食品"}, {"facility": "グランスタ東京", "category": "食品・スイーツ", "name": "Butter Milk Lab.", "url": "https://www.gransta.jp/search/shop/?s=Butter%20Milk%20Lab.", "location": "B1 地下丸の内改札内", "displayCategory": "食品"}, {"facility": "グランスタ東京", "category": "食品・スイーツ", "name": "Chocolaterie & Pâtisserie ROND-POINT", "url": "https://www.gransta.jp/search/shop/?s=Chocolaterie%20%26%20P%C3%A2tisserie%20ROND-POINT", "location": "B1 地下丸の内改札内", "displayCategory": "食品"}, {"facility": "グランスタ東京", "category": "食品・スイーツ", "name": "HENRI CHARPENTIER Atelier Tokyo", "url": "https://www.gransta.jp/search/shop/?s=HENRI%20CHARPENTIER%20Atelier%20Tokyo", "location": "B1 地下丸の内改札内", "displayCategory": "食品"}, {"facility": "グランスタ東京", "category": "食品・スイーツ", "name": "Marche Bloom（マルシェブルーム）", "url": "https://www.gransta.jp/search/shop/?s=Marche%20Bloom%EF%BC%88%E3%83%9E%E3%83%AB%E3%82%B7%E3%82%A7%E3%83%96%E3%83%AB%E3%83%BC%E3%83%A0%EF%BC%89", "location": "B1 地下丸の内改札内", "displayCategory": "食品"}, {"facility": "グランスタ東京", "category": "食品・スイーツ", "name": "neu by sarkara", "url": "https://www.gransta.jp/search/shop/?s=neu%20by%20sarkara", "location": "B1 地下丸の内改札内", "displayCategory": "食品"}, {"facility": "グランスタ東京", "category": "食品・スイーツ", "name": "ÉRIE T.（エリートーキョー）", "url": "https://www.gransta.jp/search/shop/?s=%C3%89RIE%20T.%EF%BC%88%E3%82%A8%E3%83%AA%E3%83%BC%E3%83%88%E3%83%BC%E3%82%AD%E3%83%A7%E3%83%BC%EF%BC%89", "location": "B1 地下丸の内改札内", "displayCategory": "食品"}, {"facility": "グランスタ東京", "category": "食品・スイーツ", "name": "ヒトツブカンロ", "url": "https://www.gransta.jp/search/shop/?s=%E3%83%92%E3%83%88%E3%83%84%E3%83%96%E3%82%AB%E3%83%B3%E3%83%AD", "location": "B1 地下丸の内改札内", "displayCategory": "食品"}, {"facility": "グランスタ東京", "category": "食品・スイーツ", "name": "PARIS BUTTER CHOCOLAT", "url": "https://www.gransta.jp/search/shop/?s=PARIS%20BUTTER%20CHOCOLAT", "location": "B1 銀の鈴エリア", "displayCategory": "食品"}, {"facility": "グランスタ東京", "category": "食品・スイーツ", "name": "THE DROS", "url": "https://www.gransta.jp/search/shop/?s=THE%20DROS", "location": "B1 銀の鈴エリア", "displayCategory": "食品"}, {"facility": "グランスタ東京", "category": "食品・スイーツ", "name": "an and an", "url": "https://www.gransta.jp/search/shop/?s=an%20and%20an", "location": "B1 銀の鈴エリア", "displayCategory": "食品"}, {"facility": "グランスタ東京", "category": "食品・スイーツ", "name": "shodai bio nature", "url": "https://www.gransta.jp/search/shop/?s=shodai%20bio%20nature", "location": "B1 銀の鈴エリア", "displayCategory": "食品"}, {"facility": "グランスタ東京", "category": "食品・スイーツ", "name": "カヌレリテ", "url": "https://www.gransta.jp/search/shop/?s=%E3%82%AB%E3%83%8C%E3%83%AC%E3%83%AA%E3%83%86", "location": "B1 銀の鈴エリア", "displayCategory": "食品"}, {"facility": "グランスタ東京", "category": "食品・スイーツ", "name": "コロンバン", "url": "https://www.gransta.jp/search/shop/?s=%E3%82%B3%E3%83%AD%E3%83%B3%E3%83%90%E3%83%B3", "location": "B1 銀の鈴エリア", "displayCategory": "食品"}, {"facility": "グランスタ東京", "category": "食品・スイーツ", "name": "ピエール マルコリーニ", "url": "https://www.gransta.jp/search/shop/?s=%E3%83%94%E3%82%A8%E3%83%BC%E3%83%AB%20%E3%83%9E%E3%83%AB%E3%82%B3%E3%83%AA%E3%83%BC%E3%83%8B", "location": "B1 銀の鈴エリア", "displayCategory": "食品"}, {"facility": "グランスタ東京", "category": "食品・スイーツ", "name": "喫茶店に恋して。", "url": "https://www.gransta.jp/search/shop/?s=%E5%96%AB%E8%8C%B6%E5%BA%97%E3%81%AB%E6%81%8B%E3%81%97%E3%81%A6%E3%80%82", "location": "B1 銀の鈴エリア", "displayCategory": "食品"}, {"facility": "グランスタ東京", "category": "飲食", "name": "STATION RESTAURANT THE CENTRAL", "url": "https://www.gransta.jp/search/shop/?s=STATION%20RESTAURANT%20THE%20CENTRAL", "location": "B1 スクエア ゼロエリア", "displayCategory": "飲食"}, {"facility": "グランスタ東京", "category": "飲食", "name": "海鮮居酒屋 羽田市場", "url": "https://www.gransta.jp/search/shop/?s=%E6%B5%B7%E9%AE%AE%E5%B1%85%E9%85%92%E5%B1%8B%20%E7%BE%BD%E7%94%B0%E5%B8%82%E5%A0%B4", "location": "B1 スクエア ゼロエリア", "displayCategory": "飲食"}, {"facility": "グランスタ東京", "category": "食品・スイーツ", "name": "Brick bake bakers by Pâtisserie ease", "url": "https://www.gransta.jp/search/shop/?s=Brick%20bake%20bakers%20by%20P%C3%A2tisserie%20ease", "location": "B1 銀の鈴エリア", "displayCategory": "食品"}, {"facility": "グランスタ東京", "category": "サービス・その他", "name": "名古屋コーチン専門 伊藤和四五郎商店", "url": "https://www.gransta.jp/search/shop/?s=%E5%90%8D%E5%8F%A4%E5%B1%8B%E3%82%B3%E3%83%BC%E3%83%81%E3%83%B3%E5%B0%82%E9%96%80%20%E4%BC%8A%E8%97%A4%E5%92%8C%E5%9B%9B%E4%BA%94%E9%83%8E%E5%95%86%E5%BA%97", "location": "B1 スクエア ゼロエリア", "displayCategory": "ファッション・雑貨・サービス"}, {"facility": "グランスタ東京", "category": "飲食", "name": "純但馬牛 美方 powered by GORIO", "url": "https://www.gransta.jp/search/shop/?s=%E7%B4%94%E4%BD%86%E9%A6%AC%E7%89%9B%20%E7%BE%8E%E6%96%B9%20powered%20by%20GORIO", "location": "B1 スクエア ゼロエリア", "displayCategory": "飲食"}, {"facility": "グランスタ東京", "category": "ファッション・雑貨", "name": "中川政七商店", "url": "https://www.gransta.jp/search/shop/?s=%E4%B8%AD%E5%B7%9D%E6%94%BF%E4%B8%83%E5%95%86%E5%BA%97", "location": "B1 地下丸の内改札内", "displayCategory": "ファッション・雑貨"}, {"facility": "グランスタ東京", "category": "ファッション・雑貨", "name": "かまわぬ GIFT STAND", "url": "https://www.gransta.jp/search/shop/?s=%E3%81%8B%E3%81%BE%E3%82%8F%E3%81%AC%20GIFT%20STAND", "location": "B1 地下丸の内改札内", "displayCategory": "ファッション・雑貨"}, {"facility": "グランスタ丸の内", "category": "ファッション・雑貨", "name": "神保町いちのいち", "url": "https://www.gransta.jp/search/shop/?s=%E7%A5%9E%E4%BF%9D%E7%94%BA%E3%81%84%E3%81%A1%E3%81%AE%E3%81%84%E3%81%A1", "location": "B1 丸の内地下南口改札", "displayCategory": "ファッション・雑貨"}, {"facility": "ヤエチカ", "category": "食品・スイーツ", "name": "アイリスメガネ", "url": "https://www.yaechika.com/shop/", "location": "地下", "displayCategory": "食品"}, {"facility": "ヤエチカ", "category": "食品・スイーツ", "name": "アエナ", "url": "https://www.yaechika.com/shop/", "location": "地下", "displayCategory": "食品"}, {"facility": "ヤエチカ", "category": "食品・スイーツ", "name": "コンタクトレンズアイシティ", "url": "https://www.yaechika.com/shop/", "location": "地下", "displayCategory": "食品"}, {"facility": "グランスタ東京", "category": "サービス・その他", "name": "青山フラワーマーケット", "url": "https://www.gransta.jp/search/shop/?s=%E9%9D%92%E5%B1%B1%E3%83%95%E3%83%A9%E3%83%AF%E3%83%BC%E3%83%9E%E3%83%BC%E3%82%B1%E3%83%83%E3%83%88", "location": "B1 スクエア ゼロエリア", "displayCategory": "ファッション・雑貨・サービス"}, {"facility": "グランスタ東京", "category": "食品・スイーツ", "name": "k​​amakura GORO 月うさレーベル", "url": "https://www.gransta.jp/search/shop/?s=k%E2%80%8B%E2%80%8Bamakura%20GORO%20%E6%9C%88%E3%81%86%E3%81%95%E3%83%AC%E3%83%BC%E3%83%99%E3%83%AB", "location": "1F 京葉ストリートエリア", "displayCategory": "食品"}, {"facility": "グランスタ東京", "category": "食品・スイーツ", "name": "Caffarel -Il Gianduia-", "url": "https://www.gransta.jp/search/shop/?s=Caffarel%20-Il%20Gianduia-", "location": "B1 地下丸の内改札内", "displayCategory": "食品"}, {"facility": "グランスタ東京", "category": "食品・スイーツ", "name": "Ivorish MAISON（アイボリッシュ メゾン）", "url": "https://www.gransta.jp/search/shop/?s=Ivorish%20MAISON%EF%BC%88%E3%82%A2%E3%82%A4%E3%83%9C%E3%83%AA%E3%83%83%E3%82%B7%E3%83%A5%20%E3%83%A1%E3%82%BE%E3%83%B3%EF%BC%89", "location": "B1 地下丸の内改札内", "displayCategory": "食品"}, {"facility": "グランスタ東京", "category": "食品・スイーツ", "name": "KIJITORA", "url": "https://www.gransta.jp/search/shop/?s=KIJITORA", "location": "B1 地下丸の内改札内", "displayCategory": "食品"}, {"facility": "グランスタ東京", "category": "食品・スイーツ", "name": "The Little BAKERY Tokyo", "url": "https://www.gransta.jp/search/shop/?s=The%20Little%20BAKERY%20Tokyo", "location": "B1 地下丸の内改札内", "displayCategory": "食品"}, {"facility": "グランスタ東京", "category": "食品・スイーツ", "name": "バター菓子専科 虎子堂", "url": "https://www.gransta.jp/search/shop/?s=%E3%83%90%E3%82%BF%E3%83%BC%E8%8F%93%E5%AD%90%E5%B0%82%E7%A7%91%20%E8%99%8E%E5%AD%90%E5%A0%82", "location": "B1 地下丸の内改札内", "displayCategory": "食品"}, {"facility": "グランスタ東京", "category": "食品・スイーツ", "name": "鳴門金時本舗 栗尾商店 芋乃実", "url": "https://www.gransta.jp/search/shop/?s=%E9%B3%B4%E9%96%80%E9%87%91%E6%99%82%E6%9C%AC%E8%88%97%20%E6%A0%97%E5%B0%BE%E5%95%86%E5%BA%97%20%E8%8A%8B%E4%B9%83%E5%AE%9F", "location": "B1 地下丸の内改札内", "displayCategory": "食品"}, {"facility": "グランスタ丸の内", "category": "美容・ヘルスケア", "name": "アイン薬局", "url": "https://www.gransta.jp/search/shop/?s=%E3%82%A2%E3%82%A4%E3%83%B3%E8%96%AC%E5%B1%80", "location": "B1 丸の内地下北口改札", "displayCategory": "ファッション・雑貨・サービス"}, {"facility": "グランスタ東京", "category": "ファッション・雑貨", "name": "TRAINIART TOKYO", "url": "https://www.gransta.jp/search/shop/?s=TRAINIART%20TOKYO", "location": "B1 地下丸の内改札内", "displayCategory": "ファッション・雑貨"}, {"facility": "グランスタ東京", "category": "ファッション・雑貨", "name": "Spiral Rendezvous Store（スパイラルランデヴーストア）", "url": "https://www.gransta.jp/search/shop/?s=Spiral%20Rendezvous%20Store%EF%BC%88%E3%82%B9%E3%83%91%E3%82%A4%E3%83%A9%E3%83%AB%E3%83%A9%E3%83%B3%E3%83%87%E3%83%B4%E3%83%BC%E3%82%B9%E3%83%88%E3%82%A2%EF%BC%89", "location": "B1 地下丸の内改札内", "displayCategory": "キャラクター・グッズ"}, {"facility": "東京駅一番街", "category": "ファッション・雑貨", "name": "キャラトラステーション", "url": "https://www.tokyoeki-1bangai.co.jp/shop/", "location": "B1 東京駅一番街", "displayCategory": "ファッション・雑貨"}, {"facility": "グランスタ東京", "category": "ファッション・雑貨", "name": "コスメロフト", "url": "https://www.gransta.jp/search/shop/?s=%E3%82%B3%E3%82%B9%E3%83%A1%E3%83%AD%E3%83%95%E3%83%88", "location": "B1 地下丸の内改札内", "displayCategory": "ファッション・雑貨"}, {"facility": "グランスタ八重洲", "category": "ファッション・雑貨", "name": "Tokyo Station International Clinic", "url": "https://www.gransta.jp/search/shop/?s=Tokyo%20Station%20International%20Clinic", "location": "1F・M2", "displayCategory": "ファッション・雑貨"}, {"facility": "グランスタ八重洲", "category": "ファッション・雑貨", "name": "Archive Tokyo Barber shop", "url": "https://www.gransta.jp/search/shop/?s=Archive%20Tokyo%20Barber%20shop", "location": "B1", "displayCategory": "ファッション・雑貨"}, {"facility": "グランスタ八重洲", "category": "ファッション・雑貨", "name": "JINS", "url": "https://www.gransta.jp/search/shop/?s=JINS", "location": "B1", "displayCategory": "ファッション・雑貨"}, {"facility": "グランスタ八重洲", "category": "ファッション・雑貨", "name": "KoKuMiN", "url": "https://www.gransta.jp/search/shop/?s=KoKuMiN", "location": "B1", "displayCategory": "ファッション・雑貨"}, {"facility": "グランスタ八重洲", "category": "ファッション・雑貨", "name": "カメラのキタムラ", "url": "https://www.gransta.jp/search/shop/?s=%E3%82%AB%E3%83%A1%E3%83%A9%E3%81%AE%E3%82%AD%E3%82%BF%E3%83%A0%E3%83%A9", "location": "B1", "displayCategory": "ファッション・雑貨"}, {"facility": "グランスタ八重洲", "category": "ファッション・雑貨", "name": "八重洲ブックセンター", "url": "https://www.gransta.jp/search/shop/?s=%E5%85%AB%E9%87%8D%E6%B4%B2%E3%83%96%E3%83%83%E3%82%AF%E3%82%BB%E3%83%B3%E3%82%BF%E3%83%BC", "location": "B1", "displayCategory": "ファッション・雑貨"}, {"facility": "グランスタ東京", "category": "サービス・その他", "name": "INDEN・YA×JIZAING", "url": "https://www.gransta.jp/search/shop/?s=INDEN%E3%83%BBYA%C3%97JIZAING", "location": "B1 地下丸の内改札内", "displayCategory": "ファッション・雑貨・サービス"}, {"facility": "グランスタ丸の内", "category": "ファッション・雑貨", "name": "ekissora", "url": "https://www.gransta.jp/search/shop/?s=ekissora", "location": "B1 丸の内地下北口改札", "displayCategory": "ファッション・雑貨"}, {"facility": "グランスタ東京", "category": "ファッション・雑貨", "name": "MISTER MINIT グランスタ店", "url": "https://www.gransta.jp/search/shop/?s=MISTER%20MINIT%20%E3%82%B0%E3%83%A9%E3%83%B3%E3%82%B9%E3%82%BF%E5%BA%97", "location": "B1 地下丸の内改札内", "displayCategory": "ファッション・雑貨"}, {"facility": "グランスタ東京", "category": "サービス・その他", "name": "カンナムキンパ", "url": "https://www.gransta.jp/search/shop/?s=%E3%82%AB%E3%83%B3%E3%83%8A%E3%83%A0%E3%82%AD%E3%83%B3%E3%83%91", "location": "1F 京葉ストリートエリア", "displayCategory": "ファッション・雑貨・サービス"}, {"facility": "グランスタ丸の内", "category": "サービス・その他", "name": "韓美膳", "url": "https://www.gransta.jp/search/shop/?s=%E9%9F%93%E7%BE%8E%E8%86%B3", "location": "B1 丸の内地下中央口改札", "displayCategory": "ファッション・雑貨・サービス"}, {"facility": "東京駅一番街", "category": "サービス・その他", "name": "TOKYO Craft BEER STAND", "url": "https://www.tokyoeki-1bangai.co.jp/shop/", "location": "B1", "displayCategory": "ファッション・雑貨・サービス"}, {"facility": "東京駅一番街", "category": "サービス・その他", "name": "みはし", "url": "https://www.tokyoeki-1bangai.co.jp/shop/", "location": "B1", "displayCategory": "ファッション・雑貨・サービス"}, {"facility": "東京駅一番街", "category": "サービス・その他", "name": "京橋千疋屋", "url": "https://www.tokyoeki-1bangai.co.jp/shop/", "location": "B1", "displayCategory": "ファッション・雑貨・サービス"}, {"facility": "東京駅一番街", "category": "サービス・その他", "name": "産直グルメ回転ずし 函太郎 Tokyo", "url": "https://www.tokyoeki-1bangai.co.jp/shop/", "location": "B1", "displayCategory": "ファッション・雑貨・サービス"}, {"facility": "東京駅一番街", "category": "サービス・その他", "name": "資生堂パーラー 八重洲ショップ", "url": "https://www.tokyoeki-1bangai.co.jp/shop/", "location": "B1", "displayCategory": "ファッション・雑貨・サービス"}, {"facility": "東京駅一番街", "category": "サービス・その他", "name": "越後そば", "url": "https://www.tokyoeki-1bangai.co.jp/shop/", "location": "B1", "displayCategory": "ファッション・雑貨・サービス"}, {"facility": "グランスタ東京", "category": "食品・スイーツ", "name": "HANAGATAYAグランスタ東京中央通路店", "url": "https://www.gransta.jp/search/shop/?s=HANAGATAYA%E3%82%B0%E3%83%A9%E3%83%B3%E3%82%B9%E3%82%BF%E6%9D%B1%E4%BA%AC%E4%B8%AD%E5%A4%AE%E9%80%9A%E8%B7%AF%E5%BA%97", "location": "1F 中央通路エリア", "displayCategory": "食品"}, {"facility": "グランスタ東京", "category": "食品・スイーツ", "name": "HANAGATAYAグランスタ東京北通路", "url": "https://www.gransta.jp/search/shop/?s=HANAGATAYA%E3%82%B0%E3%83%A9%E3%83%B3%E3%82%B9%E3%82%BF%E6%9D%B1%E4%BA%AC%E5%8C%97%E9%80%9A%E8%B7%AF", "location": "1F 吹き抜けエリア", "displayCategory": "食品"}, {"facility": "グランスタ東京", "category": "サービス・その他", "name": "東京ギョーザ スタンド ウーロン", "url": "https://www.gransta.jp/search/shop/?s=%E6%9D%B1%E4%BA%AC%E3%82%AE%E3%83%A7%E3%83%BC%E3%82%B6%20%E3%82%B9%E3%82%BF%E3%83%B3%E3%83%89%20%E3%82%A6%E3%83%BC%E3%83%AD%E3%83%B3", "location": "B1 スクエア ゼロエリア", "displayCategory": "ファッション・雑貨・サービス"}, {"facility": "グランスタ東京", "category": "サービス・その他", "name": "近畿大学水産研究所 はなれ", "url": "https://www.gransta.jp/search/shop/?s=%E8%BF%91%E7%95%BF%E5%A4%A7%E5%AD%A6%E6%B0%B4%E7%94%A3%E7%A0%94%E7%A9%B6%E6%89%80%20%E3%81%AF%E3%81%AA%E3%82%8C", "location": "1F 中央通路エリア", "displayCategory": "ファッション・雑貨・サービス"}, {"facility": "グランスタ東京", "category": "サービス・その他", "name": "駅弁屋 祭", "url": "https://www.gransta.jp/search/shop/?s=%E9%A7%85%E5%BC%81%E5%B1%8B%20%E7%A5%AD", "location": "1F 中央通路エリア", "displayCategory": "ファッション・雑貨・サービス"}, {"facility": "グランスタ東京", "category": "サービス・その他", "name": "駅弁屋 踊", "url": "https://www.gransta.jp/search/shop/?s=%E9%A7%85%E5%BC%81%E5%B1%8B%20%E8%B8%8A", "location": "1F 中央通路エリア", "displayCategory": "ファッション・雑貨・サービス"}, {"facility": "グランスタ東京", "category": "食品・スイーツ", "name": "TOUBEI", "url": "https://www.gransta.jp/search/shop/?s=TOUBEI", "location": "1F 中央通路エリア", "displayCategory": "食品"}, {"facility": "グランスタ東京", "category": "サービス・その他", "name": "サカナバッカ グランスタ東京店", "url": "https://www.gransta.jp/search/shop/?s=%E3%82%B5%E3%82%AB%E3%83%8A%E3%83%90%E3%83%83%E3%82%AB%20%E3%82%B0%E3%83%A9%E3%83%B3%E3%82%B9%E3%82%BF%E6%9D%B1%E4%BA%AC%E5%BA%97", "location": "1F 京葉ストリートエリア", "displayCategory": "ファッション・雑貨・サービス"}],categories=["飲食", "食品", "キャラクター・グッズ", "ファッション・雑貨・サービス"],facilityColors={"グランスタ東京": "#173b56", "東京駅一番街": "#9a4545", "グランスタ丸の内": "#287074", "KITTE丸の内": "#946846", "グランスタ八重洲": "#66547e", "ヤエチカ": "#54755f"};const facilityDetail={"グランスタ東京":"グランスタ東京（東京駅構内・改札内）","東京駅一番街":"東京駅一番街（東京駅八重洲口・改札外）","グランスタ丸の内":"グランスタ丸の内（東京駅丸の内側・改札外）","KITTE丸の内":"KITTE丸の内（丸の内南口・駅前）","グランスタ八重洲":"グランスタ八重洲（東京駅八重洲口・改札外）","ヤエチカ":"ヤエチカ（東京駅八重洲地下街・改札外）"};
+let sf="ALL",sc="ALL";
+const esc=s=>String(s??"").replace(/[&<>"']/g,m=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[m]));
+function setup(){
+ document.getElementById("nav").innerHTML='<button class="active" data-v="ALL">すべて</button>'+["グランスタ東京","東京駅一番街","グランスタ丸の内","KITTE丸の内","グランスタ八重洲","ヤエチカ"].map(x=>'<button data-v="'+esc(x)+'">'+esc(x)+'</button>').join("");
+ document.querySelectorAll("#nav button").forEach(b=>b.onclick=()=>{sf=b.dataset.v;document.querySelectorAll("#nav button").forEach(x=>x.classList.remove("active"));b.classList.add("active");render()});
+ document.getElementById("cats").innerHTML='<button class="active" data-v="ALL">すべて</button>'+categories.map(x=>'<button data-v="'+esc(x)+'">'+esc(x)+'</button>').join("");
+ document.querySelectorAll("#cats button").forEach(b=>b.onclick=()=>{sc=b.dataset.v;document.querySelectorAll("#cats button").forEach(x=>x.classList.remove("active"));b.classList.add("active");render()});
+ document.getElementById("q").oninput=render;
+}
+function render(){
+ const raw=document.getElementById("q").value.trim().toLowerCase();
+ const norm=v=>String(v||"").toLowerCase().normalize("NFKC").replace(/[\s　・･,，、。\.]/g,"");
+ const q=norm(raw);
+ const synonyms={
+   "ラーメン":["らーめん","中華","つけ麺","麺","そば"],
+   "らーめん":["ラーメン","中華","つけ麺","麺","そば"],
+   "カフェ":["喫茶","コーヒー","cafe","coffee","スイーツ"],
+   "コーヒー":["カフェ","喫茶","coffee","cafe"],
+   "ケーキ":["スイーツ","洋菓子","菓子","ショコラ","チョコ"],
+   "スイーツ":["ケーキ","洋菓子","菓子","ショコラ","チョコ"],
+   "パン":["ベーカリー","bakery","ブレッド"],
+   "寿司":["すし","鮨","sushi"],
+   "すし":["寿司","鮨","sushi"],
+   "弁当":["駅弁","弁当"],
+   "お土産":["みやげ","土産","ギフト","スイーツ","食品"],
+   "ギフト":["お土産","みやげ","土産","雑貨"],
+   "服":["ファッション","アパレル","衣類"],
+   "文房具":["雑貨","書店","本","グッズ"],
+   "本":["書店","ブック","book"],
+   "キャラクター":["グッズ","キャラ","キャラクター・グッズ"],
+   "子供":["キッズ","おもちゃ","キャラクター","グッズ"]
+ };
+ const tokens=q ? [q].concat((synonyms[raw]||[]).map(norm)) : [];
+ const score=x=>{
+   if(!q) return 0;
+   const fields=[x.name,x.facility,x.displayCategory,x.location,x.category].map(norm).join(" ");
+   let n=0;
+   if(fields.includes(q)) n+=100;
+   tokens.slice(1).forEach(t=>{if(t && fields.includes(t)) n+=25});
+   return n;
+ };
+ const a=shops.filter(x=>(sf==="ALL"||x.facility===sf)&&(sc==="ALL"||x.displayCategory===sc)&&(!q||score(x)>0))
+   .map((x,i)=>({x,s:score(x),i})).sort((a,b)=>b.s-a.s||a.i-b.i).map(o=>o.x);
+ document.getElementById("count").textContent=a.length+"店舗";
+ let out="";
+ for(const cat of categories){
+   const arr=a.filter(x=>x.displayCategory===cat); if(!arr.length) continue;
+   out+='<section class="category"><h4>'+esc(cat)+'</h4><div class="grid">';
+   for(const x of arr){
+      const col=facilityColors[x.facility]||"#173b56";
+      out+='<div class="shop"><span class="dot" style="background:'+col+'"></span><a href="'+esc(x.url)+'" target="_blank" rel="noopener">'+esc(x.name)+'</a><span class="meta"><span class="facility">'+esc(facilityDetail[x.facility]||x.facility)+'</span><span class="loc">'+esc(x.location)+'</span></span></div>';
+   }
+   out+='</div></section>';
+ }
+ document.getElementById("content").innerHTML=out||'<div class="empty">条件に一致する店舗がありません。</div>';
+}
+setup();render();
+</script>
+<script>
+(function(){
+  const map = document.querySelector('.railway-map');
+  if(!map) return;
+  const stations = map.querySelectorAll('.rail-station');
+  const existing = Array.from(document.querySelectorAll('button')).filter(b =>
+    ['すべて','飲食','食品','キャラクター・グッズ','ファッション・雑貨・サービス'].includes(b.textContent.trim())
+  );
+  stations.forEach(station=>{
+    station.addEventListener('click',()=>{
+      const cat = station.dataset.category;
+      stations.forEach(s=>{
+        const on=s===station;
+        s.classList.toggle('active',on);
+        s.setAttribute('aria-selected',on?'true':'false');
+      });
+      const target = existing.find(b=>b.textContent.trim()=== (cat==='all'?'すべて':cat));
+      if(target) target.click();
+    });
+  });
+})();
+
+
+  // Opening screen: tap/click to fade out immediately. No time-based auto close.
+  document.getElementById('tokyoIntro')?.addEventListener('click', function(){
+    this.classList.add('is-hidden');
+  });
+</script>
+
+
+
+
+</body></html>\n<style>.pickup + .bar{margin-top:34px}</style>\n
